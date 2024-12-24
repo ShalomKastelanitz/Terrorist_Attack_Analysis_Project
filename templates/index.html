@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Map</title>
+</head>
+<body>
+<h1>Interactive Map with Flask and Folium</h1>
+<!-- User input form -->
+<form method="POST" action="/">
+  <label for="query">Choose a query:</label>
+  <select id="query" name="query" required>
+    <option value="avg_casualties_per_region">Avg Casualties per Region</option>
+    <option value="yearly_change_per_region">Yearly Change per Region</option>
+    <option value="most_active_groups_by_region">most_active_groups_by_region</option>
+
+    <option value="groups_with_same_targets_in_region">Groups with same targets in region</option>
+    <option value="regions_with_most_unique_groups">regions_with_most_unique_groups</option>
+
+    <option value="regions_with_high_group_diversity">Regions with high group diversity</option>
+  </select><br><br>
+
+  <label for="region">Region (optional):</label>
+  <input type="text" id="region" name="region" placeholder="Enter Region Name"><br><br>
+
+  <label for="country">Country (optional):</label>
+  <input type="text" id="country" name="country" placeholder="Enter Country Name"><br><br>
+country
+  <label for="top">Top N (optional):</label>
+  <input type="number" id="top" name="top" placeholder="Enter top number"><br><br>
+
+  <button type="submit">Update Map</button>
+</form>
+
+<!-- Embed the updated map -->
+<iframe src="{{ url_for('render_map') }}" width="100%" height="600px"></iframe>
+
+</body>
+</html>

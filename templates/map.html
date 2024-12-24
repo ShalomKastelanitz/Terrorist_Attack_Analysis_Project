@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3710a2533d9e4798e358dd24b0a411f0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3710a2533d9e4798e358dd24b0a411f0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3710a2533d9e4798e358dd24b0a411f0 = L.map(
+                "map_3710a2533d9e4798e358dd24b0a411f0",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9d7c7efcb62ed38653b42a70418e1ada = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9d7c7efcb62ed38653b42a70418e1ada.addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var marker_107b51f1ea1d6c049e67a64eaf61b6eb = L.marker(
+                [25.94795742479478, 82.78831179662713],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_187c12e0d91f676918d0d9dd73790365 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_107b51f1ea1d6c049e67a64eaf61b6eb.setIcon(icon_187c12e0d91f676918d0d9dd73790365);
+        
+    
+        var popup_1b3e8e62ed3aa794c7400641e4d66f8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9d701a87d8a8d1ef95aa6ddff9835e4e = $(`<div id="html_9d701a87d8a8d1ef95aa6ddff9835e4e" style="width: 100.0%; height: 100.0%;">Region: South Asia<br>Country: India<br>Unique Groups: 298<br><b>Groups:</b><br>A'chik Matgrik Elite Force (AMEF)<br>Achik Matgrik Army (AMA)<br>Achik National Cooperative Army (ANCA)<br>Achik National Liberation Army (ANLA)<br>Achik National Volunteer Council-B (ANVC-B)<br>Achik National Volunteer Council (ANVC)<br>Achik Songna An'pachakgipa Kotok (ASAK)<br>Achik Tiger Force<br>Achwan-I-Mushbani<br>Adivasi Cobra Militants of Assam (ACMA)<br>Adivasi National Liberation Army (ANLA)<br>Adivasi People's Army (APA)<br>Afghan Merceneries<br>Akali Dal Party<br>Akhilesh Singh Gang<br>Al-Arifeen<br>Al-Badr<br>Al-Fajr<br>Al-Faran<br>Al-Fatah<br>Al-Hadid<br>Al-Hamas Mujahideen<br>Al-Jehad<br>Al-Madina<br>Al-Mansoorian<br>Al-Nasireen Group<br>Al-Nasirin (India)<br>Al-Shuda Brigade<br>Al-Umar Mujahideen<br>Al-Ummah<br>All Assam Revolutionary Army (AARA)<br>All India Anna Dravida Munetra Kazgan Party<br>All India Sikh Students Federation (AISSF)<br>All Kamatapur Liberation Force<br>All Karanataka Youth Council<br>All Tripura Tiger Force (ATTF)<br>Allah's Tigers<br>Ananda Marga<br>Ansar Ghazwat-ul-Hind<br>Anti-Immigrant extremists<br>Anti-Socials<br>Babbar Khalsa International (BKI)<br>Bahujan Samaj Party<br>Bandits<br>Bangladesh Tiger Force<br>Barak Valley Tiger Force (BVTF)<br>Base Movement<br>Bengali Sangram Mukti Bahini<br>Bengali Tiger Force (BTF)<br>Bharat Zinc Workers<br>Bharatiya Janata Party<br>Bhinderanwale Tiger Force of Khalistan (BTHK)<br>Bhumi Uchched Pratirodh Committee (BUPC)<br>Bihar People's  Party (Hindu militants)<br>Birsa Commando Force (BCF)<br>Black Widows<br>Bodo Liberation Tigers (BLT)<br>Bodo Militants<br>Bodo People's Front (BPF)<br>Bru Democratic Front of Mizoram (BDFM)<br>Bru National Liberation Front (BNLF)<br>Citizen's Rights Protection Volunteers<br>Communist Party of India<br>Communist Party of India- Marxist<br>Communist Party of India- Marxist-Leninist<br>Communist Party of India - Maoist (CPI-Maoist)<br>Communist Trade Union Workers<br>Congress Party Activists<br>Coordination Committee (CORCOM)<br>Dashmesh Regiment<br>Deccan Mujahideen<br>Democratic Youth Federation of India (DYFI)<br>Dima Halao Daoga (DHD)<br>Dima Hasao National Army<br>Dishmish Regiment<br>Dissident<br>Dravidar Viduthalai Kazhagam (DVK)<br>Dukhta-ran-e-Millat<br>Extremists<br>Fedayeen Khalq (People's Commandos)<br>Garo National Liberation Army<br>Gorkha Janmukti Morcha (GJM)<br>Gorkha Liberation Army (GLA)<br>Guerrillas<br>Gunmen<br>Gurkha National Liberation Front (GNLF)<br>Harakat ul-Mujahidin (HuM)<br>Harkat ul Ansar<br>Harkatul Jihad-e-Islami<br>Hill Tiger Force (HTF)<br>Hindu extremists<br>Hindu Illaignar Sena<br>Hizbul Mujahideen (HM)<br>Hmar People's Convention-Democracy (HPC-D)<br>Hynniewtrep National Liberation Council (HNLC)<br>Ikhwan-ul-Muslimeen<br>Ikhwan Jammu and Kashmir<br>Indian Mujahideen<br>Indian Tigers<br>Indigenous People's Front of Tripura (IPFT)<br>Insurgents<br>Iranians<br>Islamic Fateh<br>Islamic Front<br>Islamic Movement of Kashmir<br>Jai Shri Ram Hindu Bhai Group<br>Jaish-e-Mohammad (JeM)<br>Jama'atul Mujahideen Bangladesh (JMB)<br>Jamaat-E-Islami (India/Pakistan)<br>Jamiat ul-Mujahedin (JuM)<br>Jammu and Kashmir Islamic Front<br>Jammu and Kashmir Liberation Front<br>Japanese Red Army (JRA)<br>Jarnail Khalsa<br>Jatav Caste<br>Jharkhand Bachao Aandolan<br>Jharkhand Janmukti Parishad (JJP)<br>Jharkhand Kranti Raksha Dal (Utari Chotanagpur)<br>Jharkhand Liberation Tigers (JLT)<br>Jharkhand Prastuti Committee (JPC)<br>Jharkhand Sangharsh Jan Mukti Morcha<br>Jharkhand Tribal Forces<br>Justice and Liberty Warriors<br>Kamtapur Liberation Organization (KLO)<br>Kanglei Yawol Kanna Lup (KYKL)<br>Kangleipak Communist Party (KCP)<br>Karamyit Singh<br>Karbi Longri National Liberation Front (KLNLF)<br>Karbi Longri North Cachar Liberation Front (KLNLF)<br>Karbi National Volunteers (KNV)<br>Karbi People's Liberation Tigers (KPLT)<br>Karbi Tribe<br>Karnataka State Farmers Association<br>Kashmir Freedom Force<br>Kashmiri extremists<br>Kashmiri Hezbollah<br>Khalistan Commando Force<br>Khalistan Liberation Force<br>Khalistan Zindabad (Long Live Khalistan)<br>Khasi Students Union<br>Khorasan Chapter of the Islamic State<br>Kisar Liberation Movement<br>Kuki Independent Organization (KIO/KIA)<br>Kuki Liberation Army (KLA)<br>Kuki National Army (KNA)<br>Kuki National Front (KNF)<br>Kuki National Liberation Front (KNLF)<br>Kuki Revolutionary Army (KRA)<br>Kuki Tribal Militants<br>Kuki tribesmen<br>Kuki Unification Frontal Organization (KUFO)<br>Laiq Chanio Group of Dacoit Bandits<br>Lama Group<br>Lashkar-e-Islam (India)<br>Lashkar-e-Jhangvi<br>Lashkar-e-Taiba (LeT)<br>Lashkari-e-Adam (Army of Adam)<br>Liberal Democratic Council for Missing Land<br>Liberation of Achik Elite Force (LAEF)<br>Liberation Tigers of Tamil Eelam (LTTE)<br>Long-time Muslim immigrants from Bangladesh<br>Mahaz-e-Inquilab<br>Manipur Naga People's Army (MNPA)<br>Manipur Nationalist Revolutionary Party (MNRP)<br>Maoist Communist Center (MCC)<br>Maoist Communist Party of Manipur<br>Maoist Farm Laborers Struggle Committee (MXSS)<br>Maoists<br>Mazdoor Kisan Sangram Samiti (MKSS)<br>Meitei extremists<br>Militants<br>Minority Unity Forum<br>Miscreants<br>Mizo National Front<br>Moran Tiger Force (MTF)<br>Mujahideen Kashmir<br>Muslim Brotherhood<br>Muslim extremists<br>Muslim Janbaz Force<br>Muslim Militants<br>Muslim Rebels<br>Muslim Separatists<br>Muslim United Liberation Tigers of Assam (MULTA)<br>Muslims<br>Naga extremists<br>Naga National Council (NNC)<br>Naga People<br>Naga People's Council (NPC)<br>Naga Students Federation<br>National Democratic Front of Bodoland (NDFB)<br>National Liberation Council of Taniland<br>National Liberation Force of Bengalis (Bangali Janamukti Bahini)<br>National Liberation Front of Tripura (NLFT)<br>National People's Party (Rashtriya Janata Dal - RJD)<br>National Revolutionary Front of Manipur (NRFM)<br>National Santhali Liberation Army (NSLA)<br>National Socialist Council of Nagaland<br>National Socialist Council of Nagaland-Isak-Muivah (NSCN-IM)<br>National Socialist Council of Nagaland-Khaplang (NSCN-K)<br>National Socialist Council of Nagaland-Khole-Kitovi (NSCN-KK)<br>National Socialist Council of Nagaland-Reformation (NSCN-R)<br>National Socialist Council of Nagaland-Unification (NSCN-U)<br>Naxalites<br>New People's Army (NPA)<br>Nikhil Bharat Bangali Udbastu Samannay Samiti (NBBUSS)<br>Organization of Arab Fedayeen Cells<br>Organized Crime<br>Pahadi Cheetah<br>Pakistani trained terrorists<br>Palestinians<br>Panthic Committee<br>Party Unity<br>Pattali Makkal Katchi (PMK)<br>People's Committee against Police Atrocities (PCPA)<br>People's Liberation Army (India)<br>People's Liberation Front of India<br>People's Revolutionary Party of Kangleipak-Progressive (PREPAK-P)<br>People's Revolutionary Party of Kangleipak (PREPAK)<br>People's United Liberation Front (PULF)<br>People's War Group (PWG)<br>Political Group<br>Popular Front of India<br>Porattom<br>Praveen Dalam<br>Pro-Pakistani extremists<br>Puratchi Puligal<br>Quit Kashmir Movement (QKM)<br>Rabha National Security Force<br>Rajput extremists<br>Ranbir Sena<br>Rashtriya Swayamsevak Sangh<br>Rebels<br>Revolutionary Communist Centre (RCC)<br>Revolutionary Organization of Socialist Muslims<br>Right-wing extremists<br>Rival Activists<br>Rival caste<br>Saffron Tigers<br>Sanatan Sanstha<br>Save Kashmir Movement<br>Scooter Borne terrorists<br>Secessionists<br>Separatists<br>Servants of Islam Organization<br>Shahid Khalsa Force<br>Shangytown residents<br>Shia Muslim extremists<br>Shiv Sena<br>Sikh Extremists<br>Sinhalese Militants<br>Smugglers and Elephant Poachers<br>Students Islamic Movement of India (SIMI)<br>Tamil Liberation Army<br>Tamil Nadu Liberation Army<br>Tamils<br>Tehrik-e-Galba Islam<br>Tehrik-e-Hurriyat (TeH)<br>Tehrik al-Mojahedin<br>Telangana Separatists<br>Terai Janatantrik Party<br>Terrorists<br>Thadou People's Liberation Army (TPLA)<br>Thanthai Periyar Dravidar Kazhagam (TPDK)<br>Thavar Caste<br>Tiwa Liberation Army<br>Tribal Group<br>Tribal Revolutionary Army (TRA)<br>Tribal Separatists<br>Tribesmen<br>Tripura National Volunteers (TNV)<br>Tripura Nationalists<br>Tritiya Prastuti Committee (TPC)<br>United Achik Liberation Army (UALA)<br>United Achik National Front (UANF)<br>United Bengali Liberation Front (UBLF)<br>United Democratic Liberation Army (UDLA)<br>United Democratic Terai Liberation Front (UDTLF)<br>United Garo Security Force (UGSF)<br>United Gorkha People's Organization (UGPO)<br>United Jihad Council<br>United Karbi Liberation Army (UKLA)<br>United Kuki Liberation Front (UKLF) - India<br>United Liberation Front of Assam (ULFA)<br>United Liberation Front of Barak Valley (ULFBV) - India<br>United National Liberation Front (UNLF)<br>United National Liberation Front of WESEA (UNLFW)<br>United People's Democratic Solidarity (UPDS)<br>United Reformation Protest of India<br>United Revolutionary Front<br>United Tribal Liberation Army (UTLA)<br>Unknown<br>Villagers<br>Vishwa Hindu Parishad (VHP)<br>Volunteers of Innocent People of Nagas (VIPN)<br>Yimchunger Liberation Front (YLF)<br>Youths<br>Zeliangrong United Front<br>Zomi Revolutionary Army (ZRA)</div>`)[0];
+                popup_1b3e8e62ed3aa794c7400641e4d66f8c.setContent(html_9d701a87d8a8d1ef95aa6ddff9835e4e);
+            
+        
+
+        marker_107b51f1ea1d6c049e67a64eaf61b6eb.bindPopup(popup_1b3e8e62ed3aa794c7400641e4d66f8c)
+        ;
+
+        
+    
+    
+            var marker_86290f8cbbf534641776934e5cd2e1af = L.marker(
+                [36.67556151499087, -91.81962188606803],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_c3adf8cb51e6977b346adb1df0762318 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_86290f8cbbf534641776934e5cd2e1af.setIcon(icon_c3adf8cb51e6977b346adb1df0762318);
+        
+    
+        var popup_a28c026655732aee17f87adff351fe9d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22cfc4aa2239aefd6252ca0a627cf597 = $(`<div id="html_22cfc4aa2239aefd6252ca0a627cf597" style="width: 100.0%; height: 100.0%;">Region: North America<br>Country: United States<br>Unique Groups: 233<br><b>Groups:</b><br>Action Squad<br>African-American extremists<br>Al-Qaida<br>Al-Qaida in the Arabian Peninsula (AQAP)<br>American Indian Movement<br>American Servicemen's Union (ASU)<br>Americans for a Competent Federal Judicial System<br>Americans for Justice<br>Anarchists<br>Animal Liberation Front (ALF)<br>Animal Rights extremists<br>Anti-Abortion extremists<br>Anti-Arab extremists<br>Anti-Castro Command<br>Anti-Castro Group<br>Anti-Communist Viets Organization<br>Anti-Environmentalists<br>Anti-Government extremists<br>Anti-Government Group<br>Anti-Gun Control extremists<br>Anti-Israeli extremists<br>Anti-Kim Jong-il extremists<br>Anti-LGBT extremists<br>Anti-Liberal extremists<br>Anti-Muslim extremists<br>Anti-Nuclear extremists<br>Anti-Police extremists<br>Anti-Republican extremists<br>Anti-Semitic extremists<br>Anti-Sikh extremists<br>Anti-Technology extremists<br>Anti-Trump extremists<br>Anti-White extremists<br>Anti Shah of Iran<br>Antonia Martinez Student Commandos (AMSC)<br>Armed Commandos of Liberation<br>Armed Commandos of Student Self Defense<br>Armed Forces of Popular Resistance (FARP)<br>Armed Revolutionary Independence Movement (MIRA)<br>Armenian Group<br>Armenian Secret Army for the Liberation of Armenia<br>Armenians<br>Army of God<br>Aryan Nation<br>Aryan Republican Army<br>BAY Bombers<br>Black Afro Militant Movement<br>Black American Moslems<br>Black Brigade (United States)<br>Black Hebrew Israelites<br>Black Liberation Army<br>Black Muslims<br>Black Nationalists<br>Black Panthers<br>Black Revolutionary Assault Team<br>Black September<br>Boricua Revolutionary Front<br>Chicano Liberation Front<br>Chicano Radicals<br>Christian Liberation Army<br>Citizens for Constitutional Freedom<br>Coalition to Save the Preserves (CSP)<br>Comrades in Arms<br>Condor<br>Continental Revolutionary Army<br>Coordination of the United Revolutionary Organization (CORU)<br>Court Reform extremists<br>Covenant, Sword and the Arm of the Lord (CSA)<br>Croatian Freedom Fighters<br>Croatian Liberation Army<br>Croatian Nationalists<br>Cuban Action<br>Cuban C-4 Movement<br>Cuban Exiles<br>Cuban extremists<br>Cuban Secret Army<br>Cypriot<br>Earth First!<br>Earth Liberation Front (ELF)<br>Earth Night Action Group<br>East Side Action Committee<br>El Movimiento Revolucionario Independinista<br>Environmental Life Force<br>Environmentalists<br>Evan Mecham Eco-Terrorist International Conspiracy (EMETIC)<br>Farm Animal Revenge Militia (FARM)<br>Fourth Reich Skinheads<br>Fred Hampton Unit of the People's Forces<br>Front for the National Liberation of Puerto Rico<br>Fuerzas Armadas de Liberacion Nacional (FALN)<br>Gaddafi loyalists<br>Gay Liberation Front<br>George Jackson Brigade<br>Grupo Estrella<br>Guerrilla Forces for Liberation<br>Hanafi Muslims<br>Hatikvah Leumi or National Hope<br>Hawaiian extremists<br>Imperial Iranian Patriotic Organization<br>Incel extremists<br>Independent Armed Revolutionary Commandos (CRIA)<br>International Committee Against Nazism<br>Iranian extremists<br>Iranians<br>Iraqi extremists<br>Irish Republican Army (IRA)<br>Islamist extremists<br>Jamaat-al-Fuqra<br>Jewish Armed Resistance<br>Jewish Committee of Concern<br>Jewish Defenders<br>Jewish Defense League (JDL)<br>Jewish Direct Action<br>Jewish Extremists<br>Jihadi-inspired extremists<br>Jonathan Jackson Brigade<br>Justice Commandos for the Armenian Genocide<br>Kahane Chai<br>Ku Klux Klan<br>Latin America Anti-Communist Army (LAACA)<br>Lebanese Man<br>Left-wing extremists<br>Left-Wing Militants<br>Libyan Students<br>Lolita Lebron Puerto Rican Liberation Command<br>Luis Boitel Commandos<br>M-7<br>Maccabee Squad and the Shield of David<br>Macheteros<br>May 15 Organization for the Liberation of Palestine<br>May 19 Communist Order<br>Medellin Drug Cartel<br>Mexican Revolutionary Movement<br>Minutemen American Defense<br>Mormon Extremist<br>Movement for Cuban Justice (Pragmatistas)<br>Mujahedin-e Khalq (MEK)<br>Muslim extremists<br>National Committee to Combat Fascism<br>National Front for the Liberation of Cuba (FLNC)<br>National Integration Front (FIN)<br>National Socialist Liberation Front<br>Neo-Nazi extremists<br>New Jewish Defense League<br>New World Liberation Front (NWLF)<br>New Year's Gang<br>Ninth of June Organization<br>Nuclear Liberation Front<br>Omega-7<br>Organization 544<br>Organization Alliance of Cuban Intransigence<br>Organization of Volunteers for the Puerto Rican Revolution<br>Otpor<br>Palestine Liberation Organization (PLO)<br>Palestinians<br>Pedro Albizu Campos Revolutionary Forces<br>People's Brigade For A Healthy Genetic Future<br>People's Liberation Army (United States)<br>People's Revolutionary Party<br>Phineas Priesthood<br>Popular Front for the Liberation of Palestine (PFLP)<br>Popular Liberation Army (Puerto Rico)<br>Posse Comitatus<br>Pro-LGBT Rights extremists<br>Provisional Coordinating Committee for the Defense of Labor<br>Puerto Rican Armed Resistance<br>Puerto Rican Liberation Front<br>Puerto Rican Nationalists<br>Puerto Rican Resistance Movement<br>Puerto Rican Revolutionary Movement<br>Qaddafi loyalists<br>Quartermoon Society<br>Rajneeshees<br>Red Guerilla Family<br>Regulators<br>Republic of New Afrika<br>Republic of Texas<br>Revenge of the Trees<br>Revolutionary Action Party<br>Revolutionary Cells-Animal Liberation Brigade<br>Revolutionary Commandos of the People (CRP)<br>Revolutionary Communist Youth Brigade (RCYB)<br>Revolutionary Force 26<br>Revolutionary Force 9<br>Revolutionary Force Seven<br>Revolutionary Labor Commandos<br>Right-wing extremists<br>ROSADO-SOTO Command<br>Save Our Israel Land<br>Seattle Liberation Front<br>Secret Army Organization<br>Secret Cuban Government<br>Secret Organization Zero<br>Serbian Nationalists<br>Sons of Liberty<br>Sons of the Gestapo<br>Sovereign Citizen<br>Stop the War Coalition<br>Strikers<br>Student Radicals<br>Students for a Democratic Society<br>Students For Insurrection<br>Supporters of Charles Manson<br>Symbionese Liberation Army (SLA)<br>Tehrik-i-Taliban Pakistan (TTP)<br>The Jewish Execution with Silence<br>The Justice Department<br>The Order (Silent Brotherhood)<br>The Order II (Bruder Schweigen Strike Force II)<br>The Scorpion<br>The World United Formosans for Independence (WUFI)<br>Thunder of Zion<br>Tontons Macoutes<br>Tribal Thumb<br>United Aryan Empire<br>United Freedom Front (UFF)<br>United Jewish Underground<br>Universal Proutist Revolutionary Federation<br>Unknown<br>Up the IRS, Inc<br>Veterans United for Non-Religious Memorials<br>Vietnamese Organization to Exterminate Communists and Restore the Nation<br>Vietnamese Refugees<br>Weather Underground, Weathermen<br>Welsh Extremists<br>White extremists<br>White Panther Party<br>White Rabbit Three Percent Illinois Patriot Freedom Fighters Militia<br>World Church of the Creator<br>Worldwide Organization of Native Taiwanese<br>Young Cuba<br>Youth of the Star<br>Zebra killers</div>`)[0];
+                popup_a28c026655732aee17f87adff351fe9d.setContent(html_22cfc4aa2239aefd6252ca0a627cf597);
+            
+        
+
+        marker_86290f8cbbf534641776934e5cd2e1af.bindPopup(popup_a28c026655732aee17f87adff351fe9d)
+        ;
+
+        
+    
+    
+            var marker_aabada4898f83d3d93d4573c1683e848 = L.marker(
+                [43.318874314874115, 11.21794098969729],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_2bbf5d18803dd322c8b6b6401935c409 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_aabada4898f83d3d93d4573c1683e848.setIcon(icon_2bbf5d18803dd322c8b6b6401935c409);
+        
+    
+        var popup_c2ef3f667d948ecf4580a7cf92d832dd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d7efb4bf8c26b06210e27655f016576 = $(`<div id="html_6d7efb4bf8c26b06210e27655f016576" style="width: 100.0%; height: 100.0%;">Region: Western Europe<br>Country: Italy<br>Unique Groups: 221<br><b>Groups:</b><br>Abu Nidal Organization (ANO)<br>Al-Borkan Liberation Organization<br>Anarchist Cell Acca (C.A.A.)<br>Anarchists<br>Angry Brigade (Italy)<br>Animal Rights extremists<br>Anonima Sequestri<br>Anti-Fascist Territorial Group<br>Anti-Government Group<br>Anti-Imperialist International Brigades<br>Anti-Imperialist Territorial Nuclei (NTA)<br>Anti-Imperialistic Communist Revolutionaries<br>Anti-Racist Guerrilla Nuclei<br>Anti-Zionist Commandos<br>Anti-Zionist Movement<br>Armed Anti-Imperialist Movement<br>Armed Commandos in the Fighting Army of Mario Zichieri<br>Armed Communist Commando<br>Armed Communist Formations<br>Armed Communist Front<br>Armed Communist Nucleus<br>Armed Communist Struggle<br>Armed Falange<br>Armed Fight for Communism<br>Armed Fight for Workers Power<br>Armed Fighting Nucleus For Communism<br>Armed Group for the Defence of the People<br>Armed Groups of Organised Proletariat<br>Armed Nuclei for Communism<br>Armed Nuclei for Territorial Counterpower<br>Armed Nucleus of Communist Workers<br>Armed Proletarian Formations<br>Armed Proletarian Group<br>Armed Proletarian Groups for Communism<br>Armed Proletarian Nuclei (NAP)<br>Armed Proletarian Patrols<br>Armed Proletarian Power<br>Armed Proletarian Squads<br>Armed Proletariat Fighting Squad<br>Armed Radical Groups for Communism<br>Armed Revolutionary Groups<br>Armed Revolutionary Nuclei (NAR)<br>Armed Squads for Communism<br>Armed Struggle for Communism<br>Armed Struggle for Proletarian Power<br>Armed Womens Nuclei<br>Armed Workers Nuclei<br>Armed Workers Squads<br>Armenian Guerrillas<br>Armenian Organization for Armed Struggle<br>Armenian Secret Army for the Liberation of Armenia<br>Aryan Brotherhood<br>Autonomous Students<br>Autonomy (Italy)<br>Baader-Meinhof Group<br>Basque Fatherland and Freedom (ETA)<br>Black Lebanon<br>Black Order<br>Black September<br>Black September II<br>CCCCC<br>Che Guevara Brigade<br>Combat Brigades<br>Combat Nucleus of Communist Unity<br>Combat Territory Groups<br>Combatant Communist Front<br>Combatant Nucleus for Communism<br>Combatent Communists<br>Committee for Direct Action Against War<br>Communist Anti-Imperialistic Revolutionaries<br>Communist Armed Nucleus<br>Communist Attack Brigades<br>Communist Attack Units<br>Communist Brigade Dante Dimani<br>Communist Brigades<br>Communist Combat Unit<br>Communist Fighters Association<br>Communist Fighters Group<br>Communist Fighting Corunim- Maria Anna Maria<br>Communist Fighting Detachments<br>Communist Fighting Front<br>Communist Fighting Nuclei<br>Communist Fighting Unit<br>Communist Front for Counterpower<br>Communist Group of Proletarian Internationalism<br>Communist Guerilla Nuclei<br>Communist Nuclear<br>Communist Nuclei of Counter Power<br>Communist Patrols for Counter Power<br>Communist Progress<br>Communist Territorial Nuclei<br>Communist Territorial Unit<br>Communists<br>Communists Fighting Imperialism and Armaments<br>Comrades Organized in Partisan Nuclei<br>Confederation of Iranian Students/National Union (CISNU)<br>Conspiracy of Cells of Fire<br>Continuing Struggle<br>Continuous Struggle<br>Corsican National Liberation Front (FLNC)<br>Croatian Nationalists<br>Ein Tyrol (One Tyrol)<br>Eritrean Liberation Front<br>Extremists<br>Fighters for Communism<br>Fighting Communist Front<br>Fighting Communist Unit<br>Fighting Communists<br>Fighting Nucleus for Communism<br>Fighting Proletarian Front<br>Fighting Proletarian Squads<br>Fighting Women<br>Fighting Workers for Communism<br>Fire Group<br>Front Line Armed Nuclei (FLAN)<br>German Speaking Separatists<br>Grey Wolves<br>Guards of the Fighting Proletariat<br>Iconoclasts<br>Informal Anarchist Federation<br>International Communist Brigade<br>International Communist Group<br>International Proletarian Groups<br>International Solidarity<br>Iraqi Mujahideen<br>Islamic Mujahidin<br>Italian Combatents for Alto Adige<br>Italian Extreme Nationalist Organization<br>Italian Social Movement (MSI)<br>Italians Attacking Policies of the Regional  SVP<br>Japanese Red Army (JRA)<br>Jewish Armed Resistance<br>Jewish Extremists<br>Jihadi-inspired extremists<br>Jordanian Masses Organization<br>Justice Commandos for the Armenian Genocide<br>Kurdistan Workers' Party (PKK)<br>Lebanese Terrorist Group<br>Left-Wing Demonstrators<br>Left-wing extremists<br>Left-Wing Terrorists<br>Liberation Tigers of Tamil Eelam (LTTE)<br>Mafia<br>May 15 Organization for the Liberation of Palestine<br>Moroccan extremists<br>Neo-Fascists<br>Neo-Nazi extremists<br>New Armenian Resistance<br>New Order<br>New Partisans Movement<br>Nuclei Communist Combattants<br>Nucleus of Fighting Communists<br>Nucleus of the Armed Struggle<br>October Third Movement<br>Organization of Mauritanian Nationalists<br>Organized Comrades for Feminist Counter-Power<br>Organized Comrads for Communism<br>Organized Proletarian Communists<br>Palestinians<br>People's Liberation Movement<br>Popular Front for the Liberation of Palestine (PFLP)<br>Popular Revolutionary Movement (Italy)<br>Prima Linea<br>Proletarian Action Group<br>Proletarian Armed Squads<br>Proletarian Combatants for Communism<br>Proletarian communist commandos<br>Proletarian Division for the Army of Communist Liberation<br>Proletarian Fighting Brigades<br>Proletarian Fighting Patrol<br>Proletarian Nuclei for Communism<br>Proletarian Nucleus<br>Proletarian Patrols<br>Prolitarian Internationalism<br>Qaddafi loyalists<br>Radical Communist Armed Nucleus<br>Red Army Faction (RAF)<br>Red Brigades<br>Red Brigades Fighting Communist Party (BR-PCC)<br>Red Brigades Fighting Communist Union (BR-UCC)<br>Red Flying Squad<br>Red Guerrilla<br>Revolutionary Action<br>Revolutionary Action Front<br>Revolutionary Action Groups<br>Revolutionary Combat Brigades<br>Revolutionary Committee for Counter Force<br>Revolutionary Communist Armed Nuclei<br>Revolutionary Communist Party<br>Revolutionary Leninist Brigades<br>Revolutionary Movement<br>Revolutionary Organization of Socialist Muslims<br>Revolutionary Proletarian Initiative Nuclei (NIPR)<br>Right-wing extremists<br>Sardinian Autonomy Movement<br>Scheutzen group<br>Separatists<br>Shia Muslim extremists<br>Sisters in Arms<br>Soldiers of the Algerian Opposition<br>Southern Nucleus of Communist Counterpower<br>Sudtiroler Volkspartei-south tyrol people's party<br>Syrian Battle Front<br>Territorial Anti-Fascist Patrols<br>Territorial Armed Groups for Communism<br>Territorial Cells for Boycotting the Elections<br>Territorial Communist Command<br>Territorial Communist Units<br>Territorial Patrols of Anti-Fascist Vigilance<br>Tonino Micciche Workers Nucleus<br>Tyrol Separatists<br>Tyrolean Defense League<br>Unknown<br>Vyborg Brigade<br>Wild Cats<br>Worker's Brigade<br>Worker Autonomy, Continuous Struggle<br>Worker Counterpower<br>Workers' Organization for Communism<br>Workers Brigade for Communism<br>Workers Power</div>`)[0];
+                popup_c2ef3f667d948ecf4580a7cf92d832dd.setContent(html_6d7efb4bf8c26b06210e27655f016576);
+            
+        
+
+        marker_aabada4898f83d3d93d4573c1683e848.bindPopup(popup_c2ef3f667d948ecf4580a7cf92d832dd)
+        ;
+
+        
+    
+    
+            var marker_767e17ce53e94740b9931be27283106b = L.marker(
+                [44.33661465830843, 5.905215283308292],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_ad723a8bbccf7b5a3fc797b8d499f151 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_767e17ce53e94740b9931be27283106b.setIcon(icon_ad723a8bbccf7b5a3fc797b8d499f151);
+        
+    
+        var popup_7a08fd867bed25e9b3eb9ddde6414e27 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b638dd9225a4c4a899a6eb88682497f = $(`<div id="html_0b638dd9225a4c4a899a6eb88682497f" style="width: 100.0%; height: 100.0%;">Region: Western Europe<br>Country: France<br>Unique Groups: 204<br><b>Groups:</b><br>2nd of June Movement<br>Abu Nidal Organization (ANO)<br>Action Directe<br>Action Front for the Liberation of the Baltic Countries<br>Afghan Revolutionary Front<br>African National Congress (South Africa)<br>Al-Qaida<br>Al-Qaida in the Arabian Peninsula (AQAP)<br>Algerian Moslem Fundamentalists<br>Anarchist Revolt Against Exiled Gendarmes<br>Anarchists<br>Animal Liberation Front (ALF)<br>Animal Rights Militia<br>Anonymous Underground Movement (MCA)<br>Anti-Armenian Organization<br>Anti-Iran Government Exiles<br>Anti-Muslim extremists<br>Anti-Nuclear extremists<br>Anti-Semitic extremists<br>Anti-Terrorism ETA (ATE)<br>Anti-Terrorist Liberation Group (GAL)<br>Arab Revolutionary Front<br>Argentine Anticommunist Alliance (AAA)<br>Armata Corsa<br>Armata di Liberazione Naziunale (ALN)<br>Armed Brigades<br>Armed Islamic Group (GIA)<br>Armed Nucleus for Popular Autonomy<br>Armenian Group<br>Armenian Secret Army for the Liberation of Armenia<br>Armenians<br>Association Totalement Anti-Guerre (ATAG)<br>Autonomous Group for Armed Action<br>Autonomous Groups<br>Autonomous Intervention Collective Against the Zionist Presence in France<br>Autonomous Revolutionary Brigade<br>Avengers of Peiper Group<br>Baader-Meinhof Group<br>Bande des Rats (the rat pack) Ukranian Group<br>Basque extremists<br>Basque Fatherland and Freedom (ETA)<br>Basque Justice<br>Basque Rectitudes<br>Black September<br>Black War<br>Breton Liberation Front (FLB)<br>Breton Separatists<br>Breton Terrorist<br>Carribbean Revolutionary Independence Army<br>Charles Martel Group<br>Christian Palestinian group<br>Clandestini Corsi<br>Comite d'Action Viticole<br>Comite de Liberation et de Detournements d'Ordinateurs (Committee for the liberation and hijacking of computers)<br>Commandos<br>Commandos Against Self Destruction of the Universe<br>Commandos of France<br>Committee for the Defense of Italian Workers in France<br>Committee for the Safeguard of the Islamic Revolution<br>Committee of action against bull fights<br>Committee of Solidarity with Arab and Middle East Political Prisoners (CSPPA)<br>Communist Anti-Nuclear Front<br>Conspiracy of Cells of Fire<br>Coordination for Revolutionary Action (CAR)<br>Corsican Farmers' Front<br>Corsican National Liberation Front- Historic Channel<br>Corsican National Liberation Front (FLNC)<br>Corsican Nationalists<br>Corsican Revolutionary Brigade<br>Corsican Separatists<br>Croatian Nationalists<br>Cuncolta Naziunalista<br>Delta Group<br>Democratic Front for the Liberation of Palestine (DFLP)<br>Dev Sol<br>Ecology and Antinuclear Revolutionary Party (CRAE)<br>Falangist Security Group<br>Farmers<br>Fedayeen Khalq (People's Commandos)<br>Feminist extremists<br>Fight Xenophobia<br>First of October Antifascist Resistance Group (GRAPO)<br>France's Honour<br>Francia<br>French Armed Islamic Front<br>French Basque Nationalists<br>French Liberation Front<br>French National<br>Front for Armenian Liberation<br>Front for the Liberation of Lebanon from Foreigners<br>Front for the Liberation of the French Somali Coast<br>Front of French National Liberation<br>Fronte Paesanu Corsu di Liberazione (FPCL)<br>GAC<br>Gazteriak<br>Gracchus Babeuf<br>Group Yuri Choukewitch<br>Groups Seeking Independence<br>Guadeloupe Liberation Army<br>Guadeloupe Separatists<br>Guardsmen of Islam<br>Guerrillas<br>Hezbollah<br>Honour of the Police<br>Indipendenza<br>Informal Anarchist Federation<br>Internal Front<br>International Revolutionary Action Group (GARI)<br>International Revolutionary Solidarity<br>Iparretarrak (IK)<br>Iranian extremists<br>Iraqi Moslems<br>Irish Republican Army (IRA)<br>Irrintzi<br>Islamic State of Iraq and the Levant (ISIL)<br>Jacques de Molay Group<br>January 22<br>Jewish Combat Organization<br>Jewish Defense League (JDL)<br>Jewish Defense Organization<br>Jihadi-inspired extremists<br>Justice Commandos for the Armenian Genocide<br>Katsuhisa Omori<br>Kurdish demonstrators<br>Kurdistan Workers' Party (PKK)<br>League of French Fighters Against Jewish Occupation<br>Lebanese Armed Revolutionary Faction (LARF)<br>LW<br>M-5<br>Martyrs of Baalbek<br>Marxists<br>Masada, Action and Defense Movement<br>Meinhof-Puig-Antich Group<br>Militant Zionist Resistance Movement<br>Military Council for the True Liberation of Albania<br>Mob<br>Movement for Self-Determination<br>Movement for the Supremacy of Reason<br>Movement of Islamic Action of Iraq<br>Muslim extremists<br>Muslim Liberation Front<br>National Front for the Liberation of Cuba (FLNC)<br>National Front Security Service<br>National Liberation Front of Provence (FLNP)<br>National Movement Against the Mahgreb Invasion<br>Nationalist Intervention Group<br>Neo-Nazi extremists<br>New Armenian Resistance<br>New caledonian independence supporters<br>New Order- France<br>No Borders Group<br>Organization for the Liberation of France from Jewish Occupation<br>Orly Organization<br>Pacifist and Ecologist Committee<br>Palestine Liberation Organization (PLO)<br>Palestinians<br>Partisan Sharpshooters<br>Pessach Group<br>Polisario Front<br>Polish<br>Popular Front for the Liberation of Palestine (PFLP)<br>Portuguese Liberation Army<br>Pro-Palestinian Group<br>Proletarian Resistance Movement<br>Raul Sendic International Brigade<br>Rebels<br>Red Brigades<br>Red Brigades Fighting Communist Party (BR-PCC)<br>Red Patriots Group<br>Resistenza<br>Resistenza Corsa<br>Revolutionary Anarchist Armed Terrorist Movement<br>Revolutionary Nationalist Movement<br>Rezi Rezai International Brigades<br>Right-wing extremists<br>Right-Wing National Youth Front<br>S. O. S. France<br>Secessionists<br>Self-Defense Against All Authority<br>Separatists<br>Sixth of March Group<br>Solidarist Resistance Movement<br>Spanish Basque Battalion (BBE) (rightist)<br>Spanish National Action<br>Students<br>Supporters of Right and Freedom<br>Survivors of Golfech<br>Terrorists<br>The Defense Command of the French People and the Motherland (CDPPF)<br>The Justice Department<br>The Nocturnals<br>The Ordinary Men<br>Turkish radicals<br>Turks<br>Ukrainian nationalists<br>Union Du People Corse<br>Union of Young Kurdish Revolutionaries<br>Unione di u Populu Corsu (UPC)<br>United Liberation Front for the New Algeria<br>Unknown<br>White extremists<br>Wild Individualities<br>Youth Action Group<br>Youths</div>`)[0];
+                popup_7a08fd867bed25e9b3eb9ddde6414e27.setContent(html_0b638dd9225a4c4a899a6eb88682497f);
+            
+        
+
+        marker_767e17ce53e94740b9931be27283106b.bindPopup(popup_7a08fd867bed25e9b3eb9ddde6414e27)
+        ;
+
+        
+    
+    
+            var marker_cb833d61e9b28b4bb9b402edca0ff199 = L.marker(
+                [38.195807724193195, 23.72988028762859],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_da0818196ca374682b742363207faac5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_cb833d61e9b28b4bb9b402edca0ff199.setIcon(icon_da0818196ca374682b742363207faac5);
+        
+    
+        var popup_fddca5d528c8b9c88b532eb10f374461 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ea586f6d6ee8860d2e1081d6adac27e9 = $(`<div id="html_ea586f6d6ee8860d2e1081d6adac27e9" style="width: 100.0%; height: 100.0%;">Region: Western Europe<br>Country: Greece<br>Unique Groups: 168<br><b>Groups:</b><br>1 May<br>4 August National Organization<br>7 April Libyan Organization<br>Abu Nidal Organization (ANO)<br>Alexandros Grigoropoulos Anarchist Attack Group<br>Anarchist Action (CA / United States)<br>Anarchist Anti-Capitalist Action Group<br>Anarchist Attack Consortium<br>Anarchist Collective of Kallithea-Moschato<br>Anarchist Commando Nestor Makhno Group<br>Anarchist Faction<br>Anarchist Liberation Brigade<br>Anarchist Solidarity<br>Anarchist Squad<br>Anarchist Struggle<br>Anarchists<br>Anarchists Attack Team<br>Angry Brigade<br>Anti-Authority Group (Greece)<br>Anti-Capitalist Action<br>Anti-Democratic Struggle<br>Anti-Establishment Nucleus<br>Anti-Fascist Action<br>Anti-State Action<br>Anti-State Justice<br>Anti-State Proletarian Nuclei<br>Apella<br>Arab Revolutionary Cells<br>Arabs<br>Armed Revolutionary Action (ENEDRA)<br>Armenian Secret Army for the Liberation of Armenia<br>Arsonists<br>Arsonists for Social Cohesion<br>Athens and Thessaloniki Arsonist Nuclei<br>Attack Teams for the Dissolution of the Nation (Greece)<br>Autonomous Resistance<br>Autonomy (Greece)<br>Black and Red Anarchist and Anti-Authoritarians Initiative (Greece)<br>Black September<br>Black September II<br>Black Star<br>Cells for Solidarity Against Authority<br>Cells of Direct Attack - Living Waste Group<br>Children of November<br>Conscientious Arsonists (CA)<br>Conspiracy of Cells of Fire<br>Council for the Destruction of Order<br>Crypteia<br>Deniers of Holidays<br>Detonators of Social Uprisings<br>Dev Sol<br>Earth Liberation Front (ELF)<br>Enraged Revolutionaries<br>Epanastatiki Anatropi (Revolutionary Overthrow)<br>Erotic Anti-authority Cells<br>Ethiopians<br>Fight Against Authority<br>Fighting Guerrilla Formation<br>Fighting Popular Rally<br>First of October Antifascist Resistance Group (GRAPO)<br>Forbidden Blockade (Greece)<br>Friendly Company<br>Furious Rebellion<br>Gangs of Conscience<br>Golden Dawn<br>Greek Anarchists' Union<br>Greek Anti-Dictatorial Youth (EAN)<br>Greek National Socialist Organization<br>Greek Popular Resistance<br>Group for Martyred Isam as-Sartawi<br>Group of Carlo Giuliani<br>Group of Popular Fighters<br>Groups for Dissemination of Revolutionary Theory and Action<br>Hezbollah<br>Iconoclastic Nihilists<br>Illuminating Paths of Solidarity<br>Incendiary Committee of Solidarity for Detainees<br>Informal Anarchist Federation<br>International Revolutionary Front<br>Irish Republican Army (IRA)<br>Kentavros<br>Khristos Kasimis<br>Kurdish Dissidents<br>Kurdistan Workers' Party (PKK)<br>Last Generation<br>Lebanese National Resistance Front<br>Left-wing extremists<br>Les Casseurs<br>Libyan<br>Lone Wolves of Radical, Autonomous, Militant National Socialism<br>Marxists<br>Massive escape<br>May 15<br>May 15 Organization for the Liberation of Palestine<br>May 36<br>May 98<br>Mikhail Kaltezas Anarchist Organization<br>Militant Minority (Greece)<br>Militant People's Revolutionary Forces<br>Minorities of Metropolitan Attacks<br>Movement for Rebuilding Fatah<br>National Front (Greece)<br>National Front for the Salvation of Libya<br>National Youth Resistance Organization<br>Neo-Fascists<br>New Revolutionary Popular Struggle (NELA)<br>Nihilistic Patrol and Neighborhood Arsonists<br>Nihilists Faction<br>Northern Epirus Liberation Front (MAVI)<br>November 17 Revolutionary Organization (N17RO)<br>November 21 Organization<br>October-80<br>Organization for Revolutionary Self Defense<br>Overall Deniers of Joining the Existing<br>Palestine Liberation Organization (PLO)<br>People's Rebellion<br>People's Resistance Organized Army<br>Popular Front for the Liberation of Palestine (PFLP)<br>Popular Front for the Liberation of Palestine, Gen Cmd (PFLP-GC)<br>Popular Rage<br>Popular Resistance (Laiki Antistasi)<br>Popular Resistance Sabotage Group<br>Popular Revolutionary Action<br>Popular Revolutionary Resistance Group<br>Popular Will (Greece)<br>Powers of the Revolutionary Arc<br>Proletarian Assault Group<br>Proletariat Self-defense Groups<br>Qaddafi loyalists<br>Rabid Brothers of Giuliani<br>Rebellious Group Lambros Foundas<br>Red Line<br>Resistance Cell<br>Resistance, Liberation and Independence Organization (AAA)<br>Revolted Persons of the Polytech School<br>Revolutionary Action of Liberation<br>Revolutionary Anti-Capitalist Initiative<br>Revolutionary Cells<br>Revolutionary Continuity<br>Revolutionary Liberation Action (Epanastatiki Apelevtherotiki Drasi) - Greece<br>Revolutionary Militant Left organization<br>Revolutionary Nuclei<br>Revolutionary Organization of Socialist Muslims<br>Revolutionary People's Struggle (ELA)<br>Revolutionary Popular Left<br>Revolutionary Solidarity<br>Revolutionary Struggle<br>Revolutionary Violence Units<br>Rubicon (Rouvikonas)<br>Sect of Revolutionaries (Greece)<br>Shia Muslim extremists<br>Social Resistance<br>Solidarity with imprisoned members of Action Directe (AD)<br>Suicide Squad<br>Support of Ocalan-The Hawks of Thrace<br>The Illegal Fisherman of the Night<br>The War That Was Never Declared<br>Turks<br>Turks of Western Thrace<br>Unknown<br>Unrepentant Anarchists<br>Unsubordinated Desires<br>Urban Guerrilla War<br>Wild Freedom<br>Wild Geese of the Cities<br>Yellow Organization of Air Force Officers<br>Youths<br>Zero Tolerance</div>`)[0];
+                popup_fddca5d528c8b9c88b532eb10f374461.setContent(html_ea586f6d6ee8860d2e1081d6adac27e9);
+            
+        
+
+        marker_cb833d61e9b28b4bb9b402edca0ff199.bindPopup(popup_fddca5d528c8b9c88b532eb10f374461)
+        ;
+
+        
+    
+    
+            var marker_f5b5243e9a1f02a02a96a85d145365f0 = L.marker(
+                [33.814687907844274, 35.605186812259774],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_5f5fb21c3bc9451b548a6eff4d7e751e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f5b5243e9a1f02a02a96a85d145365f0.setIcon(icon_5f5fb21c3bc9451b548a6eff4d7e751e);
+        
+    
+        var popup_5360112b2a4ee6d2ca6f278c9e5cbd1f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9673f4bb669f29559ddc2b03654d96a3 = $(`<div id="html_9673f4bb669f29559ddc2b03654d96a3" style="width: 100.0%; height: 100.0%;">Region: Middle East & North Africa<br>Country: Lebanon<br>Unique Groups: 163<br><b>Groups:</b><br>14 March Coalition<br>16 January Organization for the Liberation of Tripoli<br>313 Brigade (Syria)<br>9 February<br>Abdullah Azzam Brigades<br>Abu Nidal Organization (ANO)<br>Ahmad Jibril<br>Aisha Umm-al Mouemeneen (Brigades of Aisha)<br>Al-Aqsa-Group<br>Al-Faruo Battalion<br>Al-Fatah<br>Al-Marabitun Revolutionary Committee<br>Al-Nusrah Front<br>Al-Qaida in Lebanon<br>Al-Sa'iqa<br>Al-Sadr Brigades<br>Amal<br>Ansar al-Imam Musa al-Sadr<br>Arab Commando Cells<br>Arab Communist Organization<br>Arab Democratic Party<br>Arab Revenge Organization<br>Arab Revolutionary Cells<br>Arab Socialist Baath Party<br>Arab Socialist Union Members<br>Arab Struggle<br>Arabs<br>Armed People<br>Armed Struggle Cells<br>Armed Struggle Organization<br>Armenian Secret Army for the Liberation of Armenia<br>Asbat al-Ansar<br>Beirut Martyrs Battalion<br>Beirut Martyrs Forces Organization<br>Bilal Badr Group<br>Black Brigade<br>Black Hand<br>Black Panther Group (Palestinian)<br>Black September<br>Brigade of al-Mukhtar al-Thaqafi<br>Christian extremists<br>Committee of Solidarity with Arab and Middle East Political Prisoners (CSPPA)<br>Communists<br>Druzes<br>Eagles of the Palestinian Revolution<br>Extremists<br>Fatah al-Islam<br>Father of the Poor<br>Forces of the Free Arab<br>Forces of the Struggling Ranks<br>Four Martyrs Brigade<br>Free Lebanon<br>Free Nasserite Revolutionaries<br>Free Revolutionaries Movement-The Giants<br>Free Syrian Army<br>Front for the Liberation of Lebanon from Foreigners<br>Future movement (Lebanon)<br>GP II<br>Guerrillas<br>Gunmen<br>Hay'at Tahrir al-Sham<br>Hezbollah<br>Hubay Qah Group<br>Independent Nasserite Movement<br>Iranian Revolution Organization<br>Iranians<br>Iraqi Communists<br>Iraqi extremists<br>Iraqi Liberation Army<br>Iraqi Mujahideen<br>Iraqi Strugglers' Movement<br>Islamic Liberation Organization<br>Islamic State of Iraq and the Levant (ISIL)<br>Islamic Unification Movement<br>Islamist extremists<br>Joint Palestinian leftist organization<br>July 14 Movement<br>Jund al-Sham for Tawhid and Jihad<br>Justice Commandos for the Armenian Genocide<br>Khalid ibn Walid<br>Khomeini loyalists<br>Kouweikhat Group<br>Lebanese and Palestinian Resistance Fighters<br>Lebanese Arab Army<br>Lebanese Armed Revolutionary Faction (LARF)<br>Lebanese Free Will Movement<br>Lebanese Liberation Front<br>Lebanese National Resistance Front<br>Lebanese Secret Army<br>Lebanese Socialist Revolutionary Organization<br>Left-Wing Terrorists<br>Liberation Battalion<br>Liwa Ahrar al-Sunna<br>M-19 (Movement of April 19)<br>Martyr Abu Ja'far Group<br>Martyr Ahmad Alishuay B Group<br>Martyr Ali Nasir group<br>Martyr Riyad Taha Group<br>Martyrs of Saad Sayel<br>Mawlawi and Mansour Group<br>Militia Members<br>Moslem opponents of Gemayel<br>Muhammed Shuqayr Group<br>Mujahedin-e Khalq (MEK)<br>Muslim Commando (Iraqi revolutionary brothers)<br>Muslim extremists<br>Muslim Fundamentalists<br>Muslim Guerrillas<br>Muslim Militants<br>Mustafa al-Hujairi Group<br>National Revolutionary Command (Umar al-Mukhtar)<br>Organization for the Defense of Detainees Rights<br>Organization of Avenging Palestinian Youth<br>Orly Organization<br>Palestine Liberation Organization (PLO)<br>Palestinian-nationalist Lebanese joint movement<br>Palestinian/Lebanese nationalists<br>Palestinians<br>Phalange<br>Popular Front for the Liberation of Palestine (PFLP)<br>Popular Front for the Liberation of Palestine, Gen Cmd (PFLP-GC)<br>Poverty Brigade<br>Prisoner  Gourgen Yanikian Group<br>Pro-Iraqi Terrorists<br>Progressive Socialist Party (PSP)<br>Red June<br>Relatives of terrorist<br>Revolutionary Action Organization of the Arab Resistance Front<br>Revolutionary Arab Youth Organization<br>Revolutionary Christians of the Cedars<br>Revolutionary Labor Organization<br>Revolutionary Liberation Cells<br>Revolutionary Organization of Socialist Muslims<br>Right Wing Christian extremists<br>Right Wing Lebanese Militiamen<br>Salah al-Din Squad<br>September 17 Organization<br>Sham 'unite<br>Sharp Sword Organization<br>Shaykh Hassan Khalid Forces<br>Shaykh Subhi Al-Salih Forces<br>Shia Muslim extremists<br>Socialist Labor Party of Lebanon<br>Soldiers of Truth<br>Sons of the South<br>Sons of the South (Shiite Muslim Group)<br>Sunni Muslim extremists<br>Sunni Resistance Committees in Lebanon (SRCL)<br>Supreme Islamic Council<br>Syrian Mujahideen<br>Syrian Social Nationalist Party<br>Tanyus Shanin Armed Unit<br>Terrorists<br>The Eradication of Evil<br>The United Southern Front<br>Tripoli Martyrs Battalion<br>Unification Army Sons Brigade<br>Unknown<br>Vengence Party<br>Villagers<br>Yazbik Revolutionary Organization<br>Youths of Ali Movement<br>Zuwar al-Imam Rida</div>`)[0];
+                popup_5360112b2a4ee6d2ca6f278c9e5cbd1f.setContent(html_9673f4bb669f29559ddc2b03654d96a3);
+            
+        
+
+        marker_f5b5243e9a1f02a02a96a85d145365f0.bindPopup(popup_5360112b2a4ee6d2ca6f278c9e5cbd1f)
+        ;
+
+        
+    
+    
+            var marker_3ad2d7c49cd1e7e6fef99dd48731919a = L.marker(
+                [30.469825829587023, 69.38126852269501],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_d9af5fa2e11d43628f5ef614065d787d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3ad2d7c49cd1e7e6fef99dd48731919a.setIcon(icon_d9af5fa2e11d43628f5ef614065d787d);
+        
+    
+        var popup_1ea3893c749043cc04f040d55d492e76 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fb5fbab80dbcc6291532a313afe7aff7 = $(`<div id="html_fb5fbab80dbcc6291532a313afe7aff7" style="width: 100.0%; height: 100.0%;">Region: South Asia<br>Country: Pakistan<br>Unique Groups: 145<br><b>Groups:</b><br>Abdullah Azzam Brigades<br>Abu Nidal Organization (ANO)<br>Afghan Guerrillas<br>Afghans<br>Afridi Tribe<br>Aghwar "Fire War" Group<br>Ahle Sunnat Wal Jamaat (ASWJ-Pakistan)<br>Al-Intiqami al-Pakistani<br>Al-Jihad (Pakistan)<br>Al-Mansoorian<br>Al-Nawaz<br>Al-Qaida<br>Al-Qaida in the Indian Subcontinent<br>Al-Zulfikar<br>Amr Bil Maroof Wa Nahi Anil Munkir<br>Ansar al-Sharia (Pakistan)<br>Ansar Wa Mohajir (Pakistan)<br>Ansarul Islam (Pakistan)<br>Anti-Bhutto demonstrators<br>Baba Ladla Gang<br>Baloch Liberation Army (BLA)<br>Baloch Liberation Front (BLF)<br>Baloch Liberation Tigers (BLT)<br>Baloch Militant Defense Army<br>Baloch Mussalah Diffah Tanzim (BMDT)<br>Baloch National Liberation Front<br>Baloch Nationalists<br>Baloch Republican Army (BRA)<br>Baloch Republican Guards (BRG)<br>Baloch Republican Party<br>Baloch Waja Liberation Army (BWLA)<br>Baloch Young Tigers (BYT)<br>Balochistan Liberation United Front (BLUF)<br>Balochistan National Army<br>Bandits<br>Bhittani tribe<br>Brelvi Muslims<br>Dacoits<br>Drug-Related Terrorists<br>Egyptian Islamic Jihad (Al-Jihad)<br>Fedayeen Imam Mahdi<br>Former Student Hostel<br>Free Balochistan Army (FBA)<br>Freedom Party<br>Gunmen<br>Hafeez Brohi Group<br>Hafiz Gul Bahadur Group<br>Halqa-e-Mehsud<br>Haqqani Network<br>Harakat ul-Mujahidin Al-Almi<br>Harkatul Jihad-e-Islami<br>Hizb-I-Islami<br>Iranian dissident group<br>Iranians<br>Iraqi Mujahideen<br>Islambouli Brigades of al-Qaida<br>Islami Jamiat-e-Talaba (IJT)<br>Islamist extremists<br>Ittehad-i-Islami<br>Jaish-e-Islam<br>Jaish-e-Khorasan (JeK)<br>Jaish-e-Mohammad (JeM)<br>Jaish al-Umar (JaU)<br>Jaish as-Saiyouf (Army of Swords)<br>Jaish Usama<br>Jamaat-E-Islami (India/Pakistan)<br>Jamaat-ul-Ahrar<br>Jammu and Kashmir Liberation Front<br>Jundallah (Pakistan)<br>Kabul Government Agents<br>Kaka-Tribesmen<br>Kalpar Tribesmen<br>Khalistan Commando Force<br>Khorasan Chapter of the Islamic State<br>Lashkar-e-Balochistan<br>Lashkar-e-Islam (Pakistan)<br>Lashkar-e-Jhangvi<br>Lashkar-e-Omar<br>Lashkar-e-Taiba (LeT)<br>Local landlord employee<br>Mahsud Tribe<br>Majlis-e-Askari<br>Mazari Tribesmen<br>Militants<br>Miscreants<br>Mob<br>Mohajir National Movement<br>Mujahideen Ansar<br>Muslim Demonstrators<br>Muslim extremists<br>Muslim Fundamentalists<br>Muslim Guerrillas<br>Muslim Militants<br>Muslim United Army (MUA)<br>Muslims<br>Mutahida Majlis-e-Amal<br>Muttahida Qami Movement (MQM)<br>National Awami Party<br>New People's Army (NPA)<br>Opposition Group<br>Opposition Militants<br>Orakzai Freedom Movement<br>Pakistan Muslim League (PML)<br>Pakistani People's Party (PPP)<br>Palestinians<br>Pathan Tribal Group<br>People's Amn Committee<br>Political Activists<br>Political Group<br>Pro-Kabul Provocateurs<br>Punjabi Taliban<br>Qari Kamran Group<br>Rival Afghan Group<br>Separatists<br>Shia Muslim extremists<br>Sikh Extremists<br>Sindh Liberation Front<br>Sindh Revolutionary Army<br>Sindhi nationalists<br>Sindhu Desh Liberation Army (SDLA)<br>Sindhudesh Revolutionary Army (SRA)<br>Sipah-e-Sahaba/Pakistan (SSP)<br>Sipah-I-Mohammed<br>Soldiers of Truth<br>Sunni Muslim extremists<br>Supporter of Bhutto<br>Taliban<br>Taliban (Pakistan)<br>Tanzeem al-Islami al-Furqan<br>Tanzeem Ittehad - I - Ulema Qabail (Tiuq)Tribesmen<br>Tawheedul Islam<br>Tehrik-e-Khilafat<br>Tehrik-e-Nafaz-e-Shariat-e-Mohammadi (TNSM)<br>Tehrik-e-Nifaz-e-Aman Balochistan-Jhalawan Brigade (TNAB-Jhalawan Brigade)<br>Tehrik-e-Taliban Islami (TTI)<br>Tehrik-e-Tuhafaz (Pakistan)<br>Tehrik-i-Taliban Pakistan (TTP)<br>Tribal Group<br>Tribesmen<br>U/I Snipers<br>Ujjan Tribe<br>United Baloch Army (UBA)<br>Unknown<br>Youths<br>Zehri Youth Force (ZYF)</div>`)[0];
+                popup_1ea3893c749043cc04f040d55d492e76.setContent(html_fb5fbab80dbcc6291532a313afe7aff7);
+            
+        
+
+        marker_3ad2d7c49cd1e7e6fef99dd48731919a.bindPopup(popup_1ea3893c749043cc04f040d55d492e76)
+        ;
+
+        
+    
+    
+            var marker_d0b7e1de25334ed09faecf311cade983 = L.marker(
+                [54.2501186730433, -5.582512759326619],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_5138787caaf3650e67485abb0951280d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_d0b7e1de25334ed09faecf311cade983.setIcon(icon_5138787caaf3650e67485abb0951280d);
+        
+    
+        var popup_95e55a960bc2939291e0dd0407c20a73 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c81e72ea52e1b6c36996b0afed56dd66 = $(`<div id="html_c81e72ea52e1b6c36996b0afed56dd66" style="width: 100.0%; height: 100.0%;">Region: Western Europe<br>Country: United Kingdom<br>Unique Groups: 108<br><b>Groups:</b><br>1st of May Group<br>2 April Group<br>Abu Nidal Organization (ANO)<br>Al-Qaida<br>Al-Qaida in Iraq<br>Al-Qaida in the Arabian Peninsula (AQAP)<br>Anarchists<br>Angry Brigade<br>Angry Foxes Cell<br>Animal Defense League<br>Animal Liberation Front (ALF)<br>Animal Rights extremists<br>Animal Rights Militia<br>Anti-Iran Government Exiles<br>Anti-Muslim extremists<br>Anti-Semitic extremists<br>Arab Liberation Army<br>Arab Liberation Front (ALF)<br>Arm na Poblachta' (Army of the Republic)<br>Armenian Secret Army for the Liberation of Armenia<br>Armenians<br>Army for Freeing Scotland<br>Babbar Khalsa International (BKI)<br>Black December<br>Black Liberation Front<br>Black September<br>Borderless Solidarity Cell (BSC)<br>Catholic Reaction Force<br>Column 88<br>Combat 18<br>Continuity Irish Republican Army (CIRA)<br>Dark Harvest<br>Direct Action Against Drugs (DADD)<br>Dissident<br>Dissident Republicans<br>English Defense League (EDL)<br>Guardians of the Islamic Revolution<br>Guerrillas<br>Hutu extremists<br>Informal Anarchist Federation<br>Irish National Liberation Army (INLA)<br>Irish People's Liberation Organization (IPLO)<br>Irish Republican Army (IRA)<br>Irish Republican Extremists<br>Islamic State of Iraq and the Levant (ISIL)<br>Jammu and Kashmir Liberation Front<br>Jewish Defense League (JDL)<br>Jihadi-inspired extremists<br>Justice Commandos for the Armenian Genocide<br>King Street<br>Kurdish Dissidents<br>Kurdish Protestors<br>Kurdistan Workers' Party (PKK)<br>Left-wing extremists<br>Libyan Students<br>Loyalist Action Force<br>Loyalist Volunteer Forces (LVF)<br>Loyalists<br>May 15 Organization for the Liberation of Palestine<br>Meibion Glyndwr<br>Militant Welsh<br>Muslim extremists<br>Muslim Fundamentalists<br>National Front for the Liberation of Cuba (FLNC)<br>Neo-Nazi extremists<br>Official Irish Republican Army (OIRA)<br>Oglaigh na hEireann<br>Orange Volunteers (OV)<br>Organization of Mujahadin of Islam<br>Palestinians<br>Paramilitaries<br>Paramilitary members<br>People's Liberation Army (Northern Ireland)<br>Popular Front for the Liberation of Palestine (PFLP)<br>Prisoner's Action Force<br>Protestant Action Group<br>Protestant extremists<br>Provisional RSPCA<br>Qaddafi loyalists<br>Random Anarchists<br>Real Irish Republican Army (RIRA)<br>Real Ulster Freedom Fighters (UFF) - Northern Ireland<br>Red Brigades<br>Red Commandos<br>Red Flag<br>Red Hand Commandos<br>Red Hand Defenders (RHD)<br>Republican Action Against Drugs (RAAD)<br>Republican Action Force<br>Scottish National Liberation Army<br>Scottish Nationalists<br>Scottish Socialist Republican League<br>Soldiers of the Algerian Opposition<br>South East Antrim Brigade<br>South Londonderry Volunteers (SLV)<br>Supporters of Johnny Adair<br>Terrorists<br>The Irish Volunteers<br>The New Irish Republican Army<br>Ulster Freedom Fighters (UFF)<br>Ulster Volunteer Force (UVF)<br>Unemployed Persons<br>Unknown<br>Welsh Extremists<br>Welsh nationalists<br>White extremists<br>White Wolves (UK)<br>Youths</div>`)[0];
+                popup_95e55a960bc2939291e0dd0407c20a73.setContent(html_c81e72ea52e1b6c36996b0afed56dd66);
+            
+        
+
+        marker_d0b7e1de25334ed09faecf311cade983.bindPopup(popup_95e55a960bc2939291e0dd0407c20a73)
+        ;
+
+        
+    
+    
+            var marker_0d188bd7d95827785bb317fabd36cbbb = L.marker(
+                [5.5986983211231856, -74.7891421406507],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_995dd58ce75e9f2b515dcfb6ac62090e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_0d188bd7d95827785bb317fabd36cbbb.setIcon(icon_995dd58ce75e9f2b515dcfb6ac62090e);
+        
+    
+        var popup_36d8b8f006bd1d2aedfab02335ebaefa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9fc22f7701e3b3edf1d203bd9b07c667 = $(`<div id="html_9fc22f7701e3b3edf1d203bd9b07c667" style="width: 100.0%; height: 100.0%;">Region: South America<br>Country: Colombia<br>Unique Groups: 104<br><b>Groups:</b><br>Abstentionist Brigades<br>Alfaro Vive<br>America Battalion<br>American Anticommunist Association (AAA)<br>Armed Forces of National Resistance (FARN)<br>Black Eagles<br>Black Flag (Bandera Negra)<br>Black Hand (Colombia)<br>Black Liberation Force<br>Brigadas Rojas<br>Broad Commando of National Liberation<br>Cali Narcotics Cartel<br>Che Guevara Brigade<br>Civic Guard<br>Civil Association for Peace in Colombia, Asocipaz<br>Cleansing Hand (La Mano Que Limpia)<br>Cleansing Squad<br>Coca Farmers<br>Colombia Without Guerrillas<br>Colombian Guerrillas<br>Colombian Patriotic Resistance<br>Colombian Revolution<br>Comando Independiente Revolucionario<br>Commander Luciano Varela Antiguerrilla Group<br>Commandos for A Popular alternative<br>Comuneros<br>Condor Plan Criminals<br>Death Squad<br>Death to Bazuqueros<br>Death to Drug Traffickers<br>Death to Kidnappers (MAS)<br>Death to Rustlers<br>Death to the Demobilized Militias<br>Democratic Revolutionary Alliance (ARDE)<br>Dignity for Colombia<br>Falange<br>Free Fatherland<br>Guerrilla Army of the Poor (EGP)<br>Guerrillas<br>Gunmen<br>Human Rights Renewal Movement (Renovacion por los Derechos Humanos)<br>Insurgency Commune<br>Jaime Bateman Cayon Group (JBC)<br>Jorge Eliecer Gaitan Nationalist Movement<br>Latin American Anti-Fascist Command<br>Left-wing extremists<br>Left-Wing Guerrillas<br>Left-Wing Terrorists<br>leftist guerrillas-Bolivarian militia<br>Libardo Moratoro Front<br>Los Barriales<br>Los Rastrojos (Colombia)<br>M-19 (Movement of April 19)<br>M-19 Splinter<br>Macetos (Paramilitary Group)<br>Marxists<br>Medellin Drug Cartel<br>Military Liberation Front of Colombia<br>Narco-Terrorists<br>National Liberation Army of Colombia (ELN)<br>National Liberation People's Front (FPLN)<br>National Socialist Civic Workers Movement<br>Nicaraguan Democratic Force (FDN)<br>Paraguayan People's Army (EPP)<br>Paramilitaries<br>Patria Grande Ejercito del Pueblo<br>Patriotic Liberation Front (FPL)<br>Peasant protesters<br>Peasant Self-Defense Group (ACCU)<br>Pedro Leon Arboleda (PLA)<br>People's Revolutionary Army (ERP)<br>People's Revolutionary Movement (MRP)<br>People's Revolutionary Organization- Colombia (ORP)<br>Policarpa Salauarpieta (Women's Command)<br>Popular Liberation Army (EPL)<br>Popular Militia (Colombia)<br>Popular Revolutionary Commandos<br>Popular Revolutionary Movement (Colombia)<br>Quintin Lame<br>Rebels<br>Red Army Faction (RAF)<br>Red Flag (Venezuela)<br>Red Guard<br>Red Tribune<br>Revolutionary Armed Forces for the Liberation of Colombia (FALCO)<br>Revolutionary Armed Forces of Colombia (FARC)<br>Revolutionary Armed Forces of Colombia (FARC) dissidents<br>Revolutionary Workers Party<br>Ricardo Franco Front (Dissident FARC)<br>Right-Wing Death Squad<br>Right-wing extremists<br>Right-Wing Paramilitaries<br>Self Defense Forces<br>Shining Path (SL)<br>Simon Bolivar Guerrilla Coordinating Board (CGSB)<br>Students<br>Supporters of presidential candidate Belisario Bet<br>The Extraditables<br>Tupac Amaru Revolutionary Movement (MRTA)<br>Unified Workers Command<br>United Self Defense Units of Colombia (AUC)<br>Unknown<br>Workers' Forces of Liberation<br>Workers' Self-Defense Movement (MAO)</div>`)[0];
+                popup_36d8b8f006bd1d2aedfab02335ebaefa.setContent(html_9fc22f7701e3b3edf1d203bd9b07c667);
+            
+        
+
+        marker_0d188bd7d95827785bb317fabd36cbbb.bindPopup(popup_36d8b8f006bd1d2aedfab02335ebaefa)
+        ;
+
+        
+    
+    
+            var marker_f9cfd209d77ef7a0f1d71ad6f99d2481 = L.marker(
+                [41.98693282723041, -2.5727850923317366],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_2a43586e02cb2c54907cbd5e85002330 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f9cfd209d77ef7a0f1d71ad6f99d2481.setIcon(icon_2a43586e02cb2c54907cbd5e85002330);
+        
+    
+        var popup_774a9609345b25a9540553e001f5a181 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0138aa75ff5ec4bcb312d69041473624 = $(`<div id="html_0138aa75ff5ec4bcb312d69041473624" style="width: 100.0%; height: 100.0%;">Region: Western Europe<br>Country: Spain<br>Unique Groups: 97<br><b>Groups:</b><br>28 February Armed Group<br>28th of December Group<br>A Resistance Group<br>Abd al-Krim Commandos<br>Abu Nidal Organization (ANO)<br>AGEL<br>Al-Borkan Liberation Organization<br>Al-Qaida<br>Alde Hemendik Movement<br>Anarchists<br>Anti-Clerical Pro-Sex Toys Group<br>Anti-Independence extremists<br>Anti-Marxist Commando<br>Anti-Nuclear extremists<br>Anti-Terrorism ETA (ATE)<br>Anti-Terrorist Liberation Group (GAL)<br>Argentine Anticommunist Alliance (AAA)<br>Armed Groups for Communism<br>Armenian Secret Army for the Liberation of Armenia<br>Autonomous Anarchist Groups<br>Autonomous Anti-Capitalist Commandos (CAA)<br>Azadejan (Liberation)<br>Basque Country Autonomous Self-Defense Group<br>Basque extremists<br>Basque Fatherland and Freedom (ETA)<br>Basque guerrillas<br>Basque Refugee Support Group<br>Basque Separatists<br>Basque terrorists<br>Black September<br>Canary Islands Independence Movement<br>Catalan independence group<br>Catalan Liberation Front (FAC)<br>Catalan Militia<br>Catalonian Resistance<br>CCCCC<br>Christ Chaos<br>Commando Adolph Hitler<br>Commandos<br>Coordination of the United Revolutionary Organization (CORU)<br>East Timorese extremists<br>Falangist Vanguard<br>Fatah Uprising<br>First of October Antifascist Resistance Group (GRAPO)<br>Force 17<br>Free Galician People's Guerrilla Army<br>Fuerza Nueva<br>GAC<br>Guerilla Party of the Galician Poor<br>Guerrillas of Christ the King<br>Haika<br>Hezbollah<br>Iberian Anarchist Federation<br>Iberian Liberation Movement (MIL)<br>Jarrai<br>Justice Commandos for the Armenian Genocide<br>Khomeini loyalists<br>Lebanese male<br>Mateo Morral Insurrectionist Commandos<br>Mujahedin-e Khalq (MEK)<br>Muslim extremists<br>National Front for the Liberation of Cuba (FLNC)<br>National Revolution<br>Neo-Fascists<br>Neo-Nazi extremists<br>Organization of Anti-Fascist Students<br>P.R.E.<br>Palestinian Liberation Command<br>Palestinians<br>Polisario Front<br>PORE<br>Ramiro Ledesma Social Centre<br>Red Army Faction (RAF)<br>Red Army for the Liberation of Catalonia<br>Red Guerrilla<br>Republican Anticlerical Group<br>Resistencia Galega<br>Revolutionary Communist League (LCR) (Spain)<br>Revolutionary Patriotic Anti-Fascist Front (FRAP)<br>RIF Popular Front<br>Right-wing extremists<br>Right-Wing Group<br>Right-wing Terrorists<br>Separatists<br>Spanish Armed Group<br>Spanish Basque Battalion (BBE) (rightist)<br>Spanish Falange<br>Spanish International Communist Party<br>Spanish National Action<br>Strikers<br>Support for Refugees (Appui aux Refugies)<br>Syndicalist Action Groups<br>Terra Lliure<br>Three Stars Autonomous Commando<br>Unknown<br>Young Brigade of Navarro<br>Youths</div>`)[0];
+                popup_774a9609345b25a9540553e001f5a181.setContent(html_0138aa75ff5ec4bcb312d69041473624);
+            
+        
+
+        marker_f9cfd209d77ef7a0f1d71ad6f99d2481.bindPopup(popup_774a9609345b25a9540553e001f5a181)
+        ;
+
+        
+    
+    
+            var marker_981bba2ce57e35bcd8fada44ab38d1db = L.marker(
+                [38.96311493165291, 36.409802445952934],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_149b665618c2e353b548e8b9ae3a0cb7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_981bba2ce57e35bcd8fada44ab38d1db.setIcon(icon_149b665618c2e353b548e8b9ae3a0cb7);
+        
+    
+        var popup_b6e1149c6ec2a9948c5e4d1e18446d70 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e1b30e8e09edcfc47746632e0c77196d = $(`<div id="html_e1b30e8e09edcfc47746632e0c77196d" style="width: 100.0%; height: 100.0%;">Region: Middle East & North Africa<br>Country: Turkey<br>Unique Groups: 94<br><b>Groups:</b><br>28 May Armenian Organization<br>Al-Qaida<br>Armed People's Units<br>Armenian Secret Army for the Liberation of Armenia<br>Arya<br>Begumcans Cell<br>Black Friday<br>Boz-Ok (Grey Arrow)<br>Chechen Rebels<br>Civil Protection Units (YPS)<br>Communist Warrior's Union<br>Dev Genc<br>Dev Sol<br>Dev Yol<br>Devrimici Halk Kurtulus Cephesi (DHKP/C)<br>Eagles of the Palestinian Revolution<br>East Turkistan Liberation Organization<br>Extremists<br>Fetullah Terrorist Organization<br>Fighters for the Liberation of the Turkish People<br>Free Syrian Army<br>Great Eastern Islamic Raiders Front (IBDA-C)<br>Grey Wolves<br>Gunmen<br>Hezbollah<br>Idealist Association<br>International Revolutionary Action Group (GARI)<br>Islamic Cause Organization<br>Islamic Movement Organization<br>Islamic Revenge Organization<br>Islamic State of Iraq and the Levant (ISIL)<br>Islamist extremists<br>June 16 Organization<br>Justice Commandos for the Armenian Genocide<br>Justice Party<br>Kaka-Tribesmen<br>Kurdish guerrillas<br>Kurdish Islamic Unity Party<br>Kurdish Marxist Separatists<br>Kurdish Militants<br>Kurdish Rebels<br>Kurdish Separatists<br>Kurdistan Freedom Hawks (TAK)<br>Kurdistan Workers' Party (PKK)<br>Kurds<br>Left-Wing Demonstrators<br>Left-wing extremists<br>Left-Wing Guerrillas<br>Left-Wing Militants<br>Left-Wing Terrorists<br>Left-Wing Workers<br>Mahir Cayan Suicide Group<br>Maoist Communist Party (MKP)<br>Marxist-Leninist Armed Propaganda Unit<br>May 15 Organization for the Liberation of Palestine<br>Mesopotamian Army (MEZOR)<br>Motherland Party<br>Muslim extremists<br>Muslim Militants<br>Palestinians<br>Patriotic Union of Kurdistan (PUK)<br>Peace at Home Council<br>People's Defense Unit (Turkey)<br>People's Liberation Force<br>People's Path<br>People's Protection Units (YPG)<br>Peoples' United Revolutionary Movement (HBDH)<br>Popular Front for the Liberation of Palestine (PFLP)<br>Pro-State Militiamen<br>Republican People's Party<br>Resistance Movement<br>Resistance Movement of the Union of Revolt Workers<br>Revolutionary Headquarters (Turkey)<br>Revolutionary Road<br>Right-Wing Group<br>Right-Wing Militants<br>RYF<br>Separatist Clandestine Organization<br>Separatists<br>South Moluccans<br>Terrorists<br>The Independent Military Wing of the Syrian Revolution Abroad<br>The Unit of the Chemical Weapons Martyrs<br>Turkish Communist Party/Marxist (TKP-ML)<br>Turkish Communist Workers Party<br>Turkish Hezbollah<br>Turkish Islamic Commandos<br>Turkish Islamic Jihad<br>Turkish Leftists<br>Turkish People's Liberation Army<br>Turkish People's Liberation Front (TPLF)(THKP-C)<br>Turkish Revolutionaries<br>Union of Revolutionary Communists in Turkey (TIKB)<br>Unknown</div>`)[0];
+                popup_b6e1149c6ec2a9948c5e4d1e18446d70.setContent(html_e1b30e8e09edcfc47746632e0c77196d);
+            
+        
+
+        marker_981bba2ce57e35bcd8fada44ab38d1db.bindPopup(popup_b6e1149c6ec2a9948c5e4d1e18446d70)
+        ;
+
+        
+    
+    
+            var marker_ff603e46c88f3ec637adb0b24891fecb = L.marker(
+                [34.02684444161745, 44.06860021942099],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_738eca093330f4f7077e467c9c1cc66e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_ff603e46c88f3ec637adb0b24891fecb.setIcon(icon_738eca093330f4f7077e467c9c1cc66e);
+        
+    
+        var popup_b5b3b909eb9514749e5a7c98f6b68c67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7e6a9809624d9a8899d3e47db5e94c8 = $(`<div id="html_f7e6a9809624d9a8899d3e47db5e94c8" style="width: 100.0%; height: 100.0%;">Region: Middle East & North Africa<br>Country: Iraq<br>Unique Groups: 91<br><b>Groups:</b><br>1920 Revolution Brigades<br>Abu Jaafar al-Mansur Brigades<br>Abu Nidal Organization (ANO)<br>Al-Da'wah Party<br>Al-Fatihin Army (AFA)<br>Al-Naqshabandiya Army<br>Al-Qaida in Iraq<br>Al-Qaida Kurdish Battalions (AQKB)<br>Al Zawahiri Loyalists<br>Anbar Salvation Council<br>Ansar al-Din<br>Ansar al-Islam<br>Ansar al-Jihad<br>Ansar al-Sunna<br>Ansar al-Tahwid wal Sunna<br>Arab Socialist Baath Party of Iraq<br>Armed Vanguards of a Second Mohammed Army<br>Asa'ib Ahl al-Haqq<br>Baathist extremists<br>Badr Brigades<br>Banner of Islam<br>Brigades of Iman Hassan-al-Basri<br>Death Squad (Iraq)<br>Diyala Salvation Council<br>Gunmen<br>Hamawand Tribe<br>Harakat al-Nujaba<br>Hizballah-Iraq<br>Imam Hussein Brigade<br>Iraq's Jihadist Leagues<br>Iraqi extremists<br>Iraqi Islamic Vanguards for National Salvation (IIVNS)<br>Iraqi Mujahideen<br>Iraqi National Congress (INC)<br>Iraqi Revolutionary Forces<br>Iraqi Sunni Extremists<br>Islamic Army in Iraq (al-Jaish al-Islami fi al-Iraq)<br>Islamic Companies<br>Islamic Movement of Iraqi Mujahidin<br>Islamic Mujahidin<br>Islamic State of Iraq (ISI)<br>Islamic State of Iraq and the Levant (ISIL)<br>Islamist extremists<br>Jaish-e-Mohammad (Iraq)<br>Jaish al-Ta'ifa al-Mansura<br>Jihadist Soldiers<br>Jund al-Sahabah Group<br>Jund Al-Tawid<br>Just Punishment Brigades<br>Kata'ib al-Imam Ali<br>Kata'ib Hezbollah<br>Khalid ibn Walid Brigade<br>Kurdish Democratic Party-Iraq (KDP)<br>Kurdish Militants<br>Kurdish Peshmerga Guerrillas<br>Kurdistan National Union<br>Kurdistan Workers' Party (PKK)<br>Kurds<br>Mahdi Army<br>Martyr Abu Ja'far Group<br>Militants<br>Military Council of the Tribal Revolutionaries (MCTR)<br>Mujahedeen Army<br>Mujahedeen Brigades<br>Mujahedeen Corps in Iraq<br>Mujahedeen Group<br>Mujahedeen Shura Council<br>Mujahedin-e Khalq (MEK)<br>Mukhtar Army<br>Munadil al-Jumalyi Brigade<br>Muslim extremists<br>National Accord Movement<br>Omar Bin Khattab Group<br>Patriotic Union of Kurdistan (PUK)<br>Popular Mobilization Forces (Iraq)<br>Pro-Government extremists<br>Revenge Brigade<br>Salafi Abu-Bakr al-Siddiq Army<br>Separatists<br>Shia Muslim extremists<br>Shield of Islam Brigade<br>Sunni Muslim extremists<br>Sunni Supporters<br>Supreme Command for Jihad and Liberation<br>Supreme Council for Islamic Revolution in Iraq (SCIRI)<br>Takfir wal-Hijra (Excommunication and Exodus)<br>Tawhid and Jihad<br>The Owners of the White Flags<br>Tribesmen<br>Unified Kurdish Socialist Party<br>Unknown</div>`)[0];
+                popup_b5b3b909eb9514749e5a7c98f6b68c67.setContent(html_f7e6a9809624d9a8899d3e47db5e94c8);
+            
+        
+
+        marker_ff603e46c88f3ec637adb0b24891fecb.bindPopup(popup_b5b3b909eb9514749e5a7c98f6b68c67)
+        ;
+
+        
+    
+    
+            var marker_2e5a29766dca1239d193cb5a30d024e1 = L.marker(
+                [31.84277799342429, 34.92805812165337],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_906231027078d04ebba274a19e4f0e9e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_2e5a29766dca1239d193cb5a30d024e1.setIcon(icon_906231027078d04ebba274a19e4f0e9e);
+        
+    
+        var popup_979a33764720429f75296afb45ef9ab9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_185f5feecd9f1336ac89c42c2cf4b323 = $(`<div id="html_185f5feecd9f1336ac89c42c2cf4b323" style="width: 100.0%; height: 100.0%;">Region: Middle East & North Africa<br>Country: Israel<br>Unique Groups: 78<br><b>Groups:</b><br>Abdullah Azzam Brigades<br>Abu Hassan<br>Abu Nidal Organization (ANO)<br>Agudat Israel Party<br>Ahfad al-Sahaba-Aknaf Bayt al-Maqdis<br>Ahrar Al-Jalil (Free People of the Galilee)<br>Al-Aqsa Martyrs Brigade<br>Al-Fatah<br>Al-Mujahedin Brigades (Palestine)<br>Ansar Al Sunnah (Palestine)<br>Ansar Bayt al-Maqdis (Ansar Jerusalem)<br>Arab Liberation Front (ALF)<br>Arabs<br>Army of State Liberators<br>Bedouin Israeli extremists<br>Black Panther Group (Palestinian)<br>Black September<br>Conqueror Army<br>Democratic Front for the Liberation of Palestine (DFLP)<br>Druzes<br>Fatah Uprising<br>Fedayeen<br>Force 17<br>Gunmen<br>Hamas (Islamic Resistance Movement)<br>Hezbollah<br>Islamic State of Iraq and the Levant (ISIL)<br>Israel Militant<br>Israeli extremists<br>Israeli settlers<br>Israeli Terrorist Group<br>Jaish Al-Umma (Army of the Nation)<br>Japanese Red Army (JRA)<br>Jerusalem Groups Hebrew (Qvutzot Yerushalayim)<br>Jewish Defense League (JDL)<br>Jewish Extremists<br>Jewish Fighting Organization (Eyal)<br>Jewish Terror<br>Kach<br>Keshet<br>Khaled Ibn al-Walid Army<br>Lebanese National Resistance Front<br>Likud Political Party<br>Liwa Ahrar al-Sunna<br>Ma'sadat al-Mujahideen<br>Major Muhammad Zuhnyn Group<br>Martyr Sami al-Ghul Brigades<br>Mujahedeen Shura Council in the Environs of Jerusalem<br>Muslim Brotherhood<br>Muslim extremists<br>Organization for Zionist Retribution<br>Palestine Liberation Front (PLF)<br>Palestine Liberation Organization (PLO)<br>Palestinian Extremists<br>Palestinian Hezbollah<br>Palestinian Islamic Jihad (PIJ)<br>Palestinian Revolution Forces<br>Palestinians<br>Popular Army Vanguards- Battalions of Return<br>Popular Front for the Liberation of Palestine (PFLP)<br>Popular Front for the Liberation of Palestine, Gen Cmd (PFLP-GC)<br>Popular Resistance Committees<br>Rabbi Rahane Group<br>Ramzi Nahra Martyr Organization<br>Revolutionary Security Apparatus<br>Settlers at Kfar Darom<br>Sheikh Omar Hadid Brigade<br>Sicarii<br>Sinai Province of the Islamic State<br>Tawhid and Jihad (Palestine)<br>Temple Mount Faithful Movement<br>Terror Against Terror<br>Terrorists<br>The Islamic Revolution to Liberate Palestine<br>The Revolt<br>Union of Galilee Christians<br>Unknown<br>Village League</div>`)[0];
+                popup_979a33764720429f75296afb45ef9ab9.setContent(html_185f5feecd9f1336ac89c42c2cf4b323);
+            
+        
+
+        marker_2e5a29766dca1239d193cb5a30d024e1.bindPopup(popup_979a33764720429f75296afb45ef9ab9)
+        ;
+
+        
+    
+    
+            var marker_19eb068b4bf1b3f7ff6f0dda234a4eb7 = L.marker(
+                [23.570688917617314, 90.43465600316823],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_872c85af941bd67001e363b09d3510e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_19eb068b4bf1b3f7ff6f0dda234a4eb7.setIcon(icon_872c85af941bd67001e363b09d3510e5);
+        
+    
+        var popup_da5ba17c95fff7386d647bee955c5de2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df7b5eb47b563428b677d08bbfc217aa = $(`<div id="html_df7b5eb47b563428b677d08bbfc217aa" style="width: 100.0%; height: 100.0%;">Region: South Asia<br>Country: Bangladesh<br>Unique Groups: 75<br><b>Groups:</b><br>Activists<br>Al-Qaida in the Indian Subcontinent<br>Al-Qaida Network for Southwestern Khulna Division<br>Al-Yakin Mujahidin<br>All-Party Students Union<br>Ansarullah Bangla Team<br>Anti-Government Group<br>Anti - Election Demonstrators<br>Arakan Army (AA)<br>Arakan Liberation Party (ALP)<br>Awami League<br>Bangalee Somo Odhikar Andolon<br>Bangladesh Communist Party<br>Bangladesh National Socialist Party<br>Bangladesh Nationalist Party (BNP)<br>Bangladesh Road Transport Workers Federation<br>Bangladesh Sarbahara Party<br>Burmese refugees<br>Chakma tribal group<br>Committee for the Elimination of Killer Collaborators<br>Communists<br>Freedom Party<br>Fundamentalists<br>Gono Bahini (GB)<br>Gunmen<br>Harkatul Jihad-e-Islami<br>Hizb al-Tahrir al-Islami (HT)<br>Hynniewtrep National Liberation Council (HNLC)<br>Islamic Shashantantra Andolon (ISA)<br>Islamic State in Bangladesh<br>Islamist extremists<br>Jadid Al-Qaida Bangladesh (JAQB)<br>Jagrata Towhidi Janata (Rising Faithfuls)<br>Jama'atul Mujahideen Bangladesh (JMB)<br>Jamaat-E-Islami (Bangladesh)<br>Marxists<br>Militant Moslem Pilgrims<br>Muslim Demonstrators<br>Muslim extremists<br>Muslim Fundamentalists<br>Muslim Militants<br>Muslims<br>National Democratic Party<br>Ohabi Islamic Sect<br>Opossition 48 hour general strikers<br>Opposition Group<br>Opposition Jatiya Samajtantrik Del Party<br>Opposition Militants<br>Palestinian Students<br>Parbatya Chattagram Jana Sanghati Samity (PCJSS) - Bangladesh<br>Political Activists<br>Political Group<br>Pro-Government Students<br>Pro Hartal Activists<br>Purbo Banglar Communist Party<br>Rival Activists<br>Rival Bangledesh Chhatra League Faction<br>Rohingya extremists<br>Sammilito Sangskritik Jote (Alliance of Cultural Forums)<br>Separatists<br>Shanti Bahini - Peace Force<br>Socialist Chhatra League<br>Strike Enforcers<br>Strikers<br>Students<br>Supporters of leftist Gana-Oikya Front<br>Tribal Group<br>Tripura Group<br>U/l men<br>Union Parishad<br>United Action Council<br>United People's Democratic Front (UPDF) - Bangladesh<br>United Students Forum<br>Unknown<br>Youths</div>`)[0];
+                popup_da5ba17c95fff7386d647bee955c5de2.setContent(html_df7b5eb47b563428b677d08bbfc217aa);
+            
+        
+
+        marker_19eb068b4bf1b3f7ff6f0dda234a4eb7.bindPopup(popup_da5ba17c95fff7386d647bee955c5de2)
+        ;
+
+        
+    
+    
+            var marker_daf7263ce1d20971ea98683dae83b3d8 = L.marker(
+                [9.850591970281828, 123.28209616253027],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_64c560f552edac82bbff3919c1d73ab0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_daf7263ce1d20971ea98683dae83b3d8.setIcon(icon_64c560f552edac82bbff3919c1d73ab0);
+        
+    
+        var popup_fa844c20bfd1dad1098c82159f863add = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8cc7d93d178f031333e996cd7a997151 = $(`<div id="html_8cc7d93d178f031333e996cd7a997151" style="width: 100.0%; height: 100.0%;">Region: Southeast Asia<br>Country: Philippines<br>Unique Groups: 75<br><b>Groups:</b><br>Abu Sayyaf Group (ASG)<br>Al-Khobar<br>Alcubar group<br>Alex Boncayao Brigade (ABB)<br>Alexander Villalon (YADO)<br>Ananda Marga<br>Angels<br>Aniban ng Ayaw sa Komunista (ANAK)<br>Ansar Al-Khilafa (Philippines)<br>April 6th Liberation Movement<br>Bangsamoro Islamic Freedom Movement (BIFM)<br>Bangsamoro National Liberation Army<br>Black Forest Command<br>Bodyguards of Muslim Warlord Governor Tupay Loong<br>Communists<br>Death Squad<br>Egyptians<br>Farmer's Movement of the Philippines (KMP)<br>Filipino Communists<br>Filipino Soldiers for the Country<br>First May Movement<br>Former Muslim Guerrillas<br>Guerrillas<br>Gunmen<br>H-World/Heavenly Group<br>Indigenous People's Federal Army (IPFA)<br>Iraqi extremists<br>Islamic State of Iraq and the Levant (ISIL)<br>Jemaah Islamiya (JI)<br>Jihad Brigades<br>Jihadi-inspired extremists<br>Jundul Khilafah (Philippines)<br>Kabataang Makabayan (KM)<br>Kawal ng Pilipinas (Soldier of the Philippines)<br>Kilafah Islamic Movement<br>Left-wing extremists<br>Left wing student group<br>Magahat Militia<br>Maute Group<br>Moro Ghuraba<br>Moro Islamic Liberation Front (MILF)<br>Moro National Liberation Front (MNLF)<br>Moro National Liberation Front Splinter group<br>Muslim extremists<br>Muslim Guerrillas<br>Muslim Militants<br>Muslim Rebels<br>Muslim Separatists<br>Muslims<br>National Democratic Front-Bicol (NDF-Bicol)<br>New Indigenous People's Army<br>New People's Army (NPA)<br>Partido Marxista-Leninista ng Pilipinas (PMLP)<br>Pentagon Kidnap Group<br>Phillipine Moslems<br>Pirates<br>Pro-Iraqi Terrorists<br>Rebels<br>Reform of the Armed Forces Movement<br>Revolutionary Proletarian Army<br>Right-Wing Death Squad<br>Right-Wing Group<br>Right-Wing Rebel Military Group<br>Right Wing Vigilantes<br>Sagrado Corazon Fanatic Group<br>Seaborne Moslem Raiders<br>Squatters<br>Students<br>Supporters of opposing candidate Abdu Sakurtan<br>Terrorists<br>Tulawie Clan<br>U/I Private army of wral politician<br>Unknown<br>Vigilante Group<br>Young Officer Union of the New Generation and Reformist Armed Forces of the Philippines (YOU-RAFP)</div>`)[0];
+                popup_fa844c20bfd1dad1098c82159f863add.setContent(html_8cc7d93d178f031333e996cd7a997151);
+            
+        
+
+        marker_daf7263ce1d20971ea98683dae83b3d8.bindPopup(popup_fa844c20bfd1dad1098c82159f863add)
+        ;
+
+        
+    
+    
+            var marker_cde3cfb804be3443462399c6fbc2c75d = L.marker(
+                [31.86979744959481, 17.98923350090002],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_bc22c8362cc97701f0be5d7597a5d683 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_cde3cfb804be3443462399c6fbc2c75d.setIcon(icon_bc22c8362cc97701f0be5d7597a5d683);
+        
+    
+        var popup_213547c1995aa0492836f87d419e12ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7e1f45822967ec0bf970ba62fd7aa6c9 = $(`<div id="html_7e1f45822967ec0bf970ba62fd7aa6c9" style="width: 100.0%; height: 100.0%;">Region: Middle East & North Africa<br>Country: Libya<br>Unique Groups: 74<br><b>Groups:</b><br>Abdul Ghani Kikli Militia<br>Abu Bakr Unis Jabr Brigade<br>Abu Obaida bin Jarrah Brigade<br>Abu Salim Martyr's Brigade<br>Ahneish Militia<br>Al-Faruq Militia<br>Al-Fateh Al-Jadid<br>Al-Madani Brigade<br>Al-Qaida in the Islamic Maghreb (AQIM)<br>Al-Qaqa Brigade<br>Al-Saadawi Militia<br>Al-Sawaiq Brigade<br>Al-Zawiya Syndicates Council<br>Al-Zintan Revolutionaries' Military Council<br>Amal<br>Amazigh Islamic Front<br>Anas al-Dabbashi Brigade<br>Ansar al-Sharia (Libya)<br>Ansar al-Sharia (Tunisia)<br>Army of the Tribes<br>Bab Tajura Brigade<br>Barq al-Nasser Brigade<br>Barqa Province of the Islamic State<br>Basic People's Congresses<br>Benghazi Defense Brigades (BDB)<br>Brigades of Imprisoned Sheikh Omar Abdel-Rahman<br>Cyrenaica Self-Defense Force<br>February 17 Martyrs Brigade<br>Fezzan Province of the Islamic State<br>Free Libya Martyrs Brigade<br>Ghniwah Militia<br>Haftar Militia<br>Hay Andalus Defense Operations Room<br>Islamic Movement of Martyrs<br>Islamic State of Iraq and the Levant (ISIL)<br>Islamic Youth Shura Council<br>Jaish al-Islam (Libya)<br>Jaish Tahkim al-Din<br>Jund al-Islam<br>Justice and Equality Movement (JEM)<br>Kani Brigade<br>Knights of Janzour<br>Libya Revolutionaries Operations Room (LROR)<br>Libya Shield Force<br>Libyan Militia<br>Medfaiyah Wal-Sewarigh Brigade<br>Misrata Brigades<br>Misurata Rebels<br>Mitiga Militia<br>Muslim Brotherhood<br>Muslim extremists<br>Mutassim Billah Gaddafi Battalion<br>Nalut Group<br>National Front for the Salvation of Libya<br>Nawasi Brigade<br>Omar Mukhtar Militia<br>Qaddafi loyalists<br>Rafallah al-Sahati Brigade<br>Shura Council of Ajdabiya Revolutionaries<br>Shura Council of Benghazi Revolutionaries<br>Shura Council of Mujahideen in Derna<br>Sudan Liberation Movement<br>Tabu Tribe<br>Takfir wal-Hijra (Excommunication and Exodus)<br>Tawheed Militia<br>Tribesmen<br>Tripoli Province of the Islamic State<br>Tripoli Revolutionaries Battalion<br>Tuareg extremists<br>Unknown<br>Vanguards of the Caliphate<br>Zawiya Martyrs Brigade<br>Zintani Militia<br>Zwai Tribe</div>`)[0];
+                popup_213547c1995aa0492836f87d419e12ed.setContent(html_7e1f45822967ec0bf970ba62fd7aa6c9);
+            
+        
+
+        marker_cde3cfb804be3443462399c6fbc2c75d.bindPopup(popup_213547c1995aa0492836f87d419e12ed)
+        ;
+
+        
+    
+    
+            var marker_4d6fefb411302ddecef06224d8272553 = L.marker(
+                [27.564089936981702, 84.79655866583744],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_e6a8c25a17ce9743e40e4441b250fe39 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4d6fefb411302ddecef06224d8272553.setIcon(icon_e6a8c25a17ce9743e40e4441b250fe39);
+        
+    
+        var popup_e551569c7b030d853cf5c4ba0b28a5fc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99c8615da623dd8f704116e2edbb1cc0 = $(`<div id="html_99c8615da623dd8f704116e2edbb1cc0" style="width: 100.0%; height: 100.0%;">Region: South Asia<br>Country: Nepal<br>Unique Groups: 74<br><b>Groups:</b><br>Akhil Terai Mukti Morcha (ATMM)<br>All Nepal Free Nationalist Students Union<br>All Nepal National Free Student Union-Revolutionary<br>Anti-Government extremists<br>Anti-Government Guerrillas<br>Anti-Monarchists<br>Bhisan Himali Bag<br>Biswabhumi Sena Bishal Nepal<br>Communist Party of India - Maoist (CPI-Maoist)<br>Communist Party of Nepal- Maoist (CPN-M)<br>Communist Party of Nepal- Unified Marxist-Leninist (CPN-UML)<br>Communist Party of Nepal-Maoist (Baidya)<br>Communist Party of Nepal - Maoist (CPN-Maoist-Chand)<br>Communist Party of Nepal (People's War Group)<br>Dynamic Youth Forum<br>Good Vision Party (India)<br>Harakat ul-Mujahidin (HuM)<br>Himali Tigers<br>Hindu Morcha Nepal<br>Janatantrik Terai Madhes Mukti Party- Bhagat Singh (JTMMP)<br>Janatantrik Terai Madhesh Mukti Morcha (JTMMM)<br>Janatantrik Terai Mukti Morcha- Bisphot Singh (JTMM-B)<br>Janatantrik Terai Mukti Morcha- Goit (JTMM-G)<br>Janatantrik Terai Mukti Morcha- Jwala Singh (JTMM-J)<br>Janatantrik Terai Mukti Morcha- Prithvi Singh (JTMM-P)<br>Janatantrik Terai Mukti Morcha- Rajan Mukti (JTMM-R)<br>Janatantrik Terai Mukti Morcha- Ranbir Singh (JTMM-RS)<br>Janatantrik Terai Mukti Morcha (JTMM)<br>Janatantrik Tiger Janashakti Party<br>Khumbuwan Mukti Morcha<br>Kirat Janabadi Workers Party<br>Left-wing extremists<br>Left-Wing Terrorists<br>Madhesh Mukti Sangram (MMS)<br>Madhesh Rastra Janatantrik Revolutionary (RJR) - Nepal<br>Madhesi Mukti Tigers (MMT)<br>Madhesi People's Rights Forum (MPRF)<br>Madhesi Virus Killers<br>Mahan Madhesh Janakantri Party (MMJP)- Nepal<br>Maoist Communist Center (MCC)<br>Maoists<br>Mongolian Mukti Morcha<br>National Liberation Army (Nepal)<br>National People's Movement Coordination Committee<br>Nepal Defense Army<br>Nepalbad Party<br>Nepali Congress Party (NC)<br>People's Liberation Army (India)<br>Political Group<br>Pragatishil Tarai Mukti Morcha<br>Ranbir Sena<br>Rastriya Janashakti Party (RJP)<br>Rival Party Members<br>Samyukta Janatantrik Terai Mukti Morcha (SJTMM)<br>Samyukta Jatiya Mukti Morcha (SJMM)<br>Samyukta Terai Madhes Mukti Party<br>Sanghiya Limbuwan Committee (SLC)<br>Shiv Sena<br>Sudurpaschim Janata Dal<br>Swatantra Nepal Dal<br>Terai Army<br>Terai Cobra<br>Terai Communist Party<br>Terai Janatantrik Madhes Party<br>Terai Madheshi Mukti Morcha (TMMM)<br>Terai Rastriya Mukti Sena (TRMS)<br>Tharuhat Joint Struggle Committee (TJSC)<br>Unified Communist Party of Nepal (Maoist)<br>United Democratic Madhesi Front (UDMF)<br>United Janatantrik Terai Mukti Morcha (U-JTMM)<br>United Liberation Torchbearers Forces<br>United People's Front<br>Unknown<br>Young Communist League</div>`)[0];
+                popup_e551569c7b030d853cf5c4ba0b28a5fc.setContent(html_99c8615da623dd8f704116e2edbb1cc0);
+            
+        
+
+        marker_4d6fefb411302ddecef06224d8272553.bindPopup(popup_e551569c7b030d853cf5c4ba0b28a5fc)
+        ;
+
+        
+    
+    
+            var marker_4d1d0c010f68c898361071bbc075db11 = L.marker(
+                [33.8229860685977, 51.574512420731935],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_2ff108588b3cdc10155fcdbb06850cf4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4d1d0c010f68c898361071bbc075db11.setIcon(icon_2ff108588b3cdc10155fcdbb06850cf4);
+        
+    
+        var popup_1443360760decde7f992415a8aca0cab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c10d35dd28b33fa73320ec3995a8e8c9 = $(`<div id="html_c10d35dd28b33fa73320ec3995a8e8c9" style="width: 100.0%; height: 100.0%;">Region: Middle East & North Africa<br>Country: Iran<br>Unique Groups: 72<br><b>Groups:</b><br>Afghan Rebels<br>Al-Ahwaz Arab People's Democratic Front<br>Ansar al-Furqan<br>Ansar Sarallah<br>Anti-Government Group<br>Anti-Revolutionary Agents<br>Arab People's Group<br>Arab Separatists<br>Arab Youth Group (Militant)<br>Arabs<br>Arbav Martyrs of Khuzestan<br>Armenian Secret Army for the Liberation of Armenia<br>Armenians<br>Arya<br>Autonomy-Seeking Arabs<br>Baloch Nationalists<br>Black Wednesday<br>Communists<br>Counter-revolutionaries<br>Democratic Party<br>Fedayeen Khalq (People's Commandos)<br>Fighters of the People<br>Forqan Group<br>Free and Democratic Society of Eastern Kurdistan (KODAR)<br>Guerrillas<br>Harakat Ansar Iran (HAI)<br>Hezbollah<br>Iranians<br>Islamic State of Iraq and the Levant (ISIL)<br>Jaish al-Adl<br>Jihadi Movement of the Sunna People of Iran<br>Jundallah (Iran)<br>Kurdish Democratic Party-Iran (KDP)<br>Kurdish guerrillas<br>Kurdish Oppositionists<br>Kurdish Rebels<br>Kurdistan Free Life Party<br>Kurdistan Freedom Hawks (TAK)<br>Kurdistan Workers' Party (PKK)<br>Left-Wing Terrorists<br>Local Residents<br>Mahdaviyat<br>Martyrs revenge organization<br>Marxist Peoples Fedayeen of Iran<br>Mujahedin-e Khalq (MEK)<br>Muslim Brotherhood<br>Muslim extremists<br>Muslims<br>National Movement of Iranian Resistance<br>Ninth of June Organization<br>Organization for Purging the Majlis (Parliament)<br>Orly Organization<br>Popular Front for the Liberation of Palestine (PFLP)<br>Separatist Arab Guerrillas<br>Separatists<br>Shahin (Falcon)<br>Sharivad 17 Tal-Al-Za'atar(Sept 17 Tal-Al-Za'atar)<br>Siah KAL<br>Sikh Extremists<br>Sipah-e-Sahaba/Pakistan (SSP)<br>Suqour al-Ahvaz<br>SYS<br>Terrorists<br>The Aref Boluki Dynamite group<br>The Great Serpent<br>The Islamic Movement<br>Tribal guerrillas<br>Ultra Conservative Clerical Group<br>Unk Iranian Guerrillas<br>Unknown<br>Urban Guerrillas<br>Zagros Eagles</div>`)[0];
+                popup_1443360760decde7f992415a8aca0cab.setContent(html_c10d35dd28b33fa73320ec3995a8e8c9);
+            
+        
+
+        marker_4d1d0c010f68c898361071bbc075db11.bindPopup(popup_1443360760decde7f992415a8aca0cab)
+        ;
+
+        
+    
+    
+            var marker_fe666228058efebb6ab2b99f02d9e082 = L.marker(
+                [31.759121790970813, 34.91781069977417],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_bd9cab46e94c4982b7fc49746eecb3f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_fe666228058efebb6ab2b99f02d9e082.setIcon(icon_bd9cab46e94c4982b7fc49746eecb3f9);
+        
+    
+        var popup_74fbaf814c6154c37a3461047f186e1a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_187a705cd06826ab51bf62405af7b864 = $(`<div id="html_187a705cd06826ab51bf62405af7b864" style="width: 100.0%; height: 100.0%;">Region: Middle East & North Africa<br>Country: West Bank and Gaza Strip<br>Unique Groups: 71<br><b>Groups:</b><br>Abu Musa Group<br>Abu Nidal Organization (ANO)<br>Ahrar Al-Jalil (Free People of the Galilee)<br>Al-Aqsa Martyrs Brigade<br>Al-Fatah<br>Al-Qaida<br>Arab-Israeli extremists<br>Arabs<br>Army of Islam<br>Avengers of the Infants<br>Ba'adi (on my own behalf)<br>Black Panther Group (Palestinian)<br>Black Tigers<br>David's Sword<br>Democratic Front for the Liberation of Palestine (DFLP)<br>Eagles of the Palestinian Revolution<br>Extremists<br>Fatah Hawks<br>Force 17<br>Gilad Shalhevet Brigades<br>Groups of Martyr Baha Eleyan<br>Gunmen<br>Hamas (Islamic Resistance Movement)<br>Hasmoneans (Jewish Settler Group)<br>Hezbollah Palestine<br>Intifada Martyrs<br>Islamic Salvation Front (Palestine)<br>Islamic State of Iraq and the Levant (ISIL)<br>Islamic Swords of Justice in the Land of Ribat<br>Israeli extremists<br>Israeli settlers<br>Israeli Terrorist Group<br>Jenin Martyrs Brigades<br>Jewish Extremists<br>Jewish Terror<br>Jordanian extremists<br>Jund Ansar Allah<br>Kach<br>Kahane Chai<br>Kamal Udwan Unit of Palestinians<br>Lebanese Resistance Group<br>Lehava<br>Martyrs Halim Group<br>Marwan Al-Qawasimi and Amir Abu-Ayshah Group<br>Muslim extremists<br>Muslim Militants<br>Muslims<br>Palestine Liberation Organization (PLO)<br>Palestinian Activists<br>Palestinian Extremists<br>Palestinian Hezbollah<br>Palestinian Islamic Jihad (PIJ)<br>Palestinian Revolution Forces<br>Palestinians<br>Popular Army Vanguards- Battalions of Return<br>Popular Front for the Liberation of Palestine (PFLP)<br>Popular Front for the Liberation of Palestine, Gen Cmd (PFLP-GC)<br>Popular Resistance Committees<br>Revolutionary Security Apparatus<br>Sheikh Omar Hadid Brigade<br>Sinai Province of the Islamic State<br>Supporters of the Islamic State in Jerusalem<br>Tanzim<br>Tawhid and Jihad (Palestine)<br>Terror Against Terror<br>The Husayn Ubayyat Martyrs' Brigades<br>The Nation's Army<br>The Revolt<br>U/I Snipers<br>Umar al-Mukhtar Martyr Forces<br>Unknown</div>`)[0];
+                popup_74fbaf814c6154c37a3461047f186e1a.setContent(html_187a705cd06826ab51bf62405af7b864);
+            
+        
+
+        marker_fe666228058efebb6ab2b99f02d9e082.bindPopup(popup_74fbaf814c6154c37a3461047f186e1a)
+        ;
+
+        
+    
+    
+            var marker_a13a0aab191543836bad6d95d8027c8b = L.marker(
+                [50.84765263825762, 9.537113020833344],
+                {
+}
+            ).addTo(map_3710a2533d9e4798e358dd24b0a411f0);
+        
+    
+            var icon_0ae839200aed51a5a31e5272a7888ca8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a13a0aab191543836bad6d95d8027c8b.setIcon(icon_0ae839200aed51a5a31e5272a7888ca8);
+        
+    
+        var popup_4077e0da9a704961b3354a411b49a78c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6b1441e3d4e5d15eaaf8fd63034cfe83 = $(`<div id="html_6b1441e3d4e5d15eaaf8fd63034cfe83" style="width: 100.0%; height: 100.0%;">Region: Western Europe<br>Country: West Germany (FRG)<br>Unique Groups: 68<br><b>Groups:</b><br>2nd of June Movement<br>Action Struggle Against the World<br>Afghans<br>Anarchio Scene<br>Anti-Abortion extremists<br>Anti-AF<br>Anti-American Arab Liberation Front<br>Anti-Capitalist Commando<br>Anti-Government Group<br>Anti-Imperialist Fighters for a Free Palestine<br>Armenian Secret Army for the Liberation of Armenia<br>Autonomen<br>Baader-Meinhof Group<br>Black Cells<br>Black September<br>Census Opponents<br>Commando 15th October<br>Commando 27 September<br>Commando Heinz Neumann<br>Croatian Nationalists<br>Croatian Revolutionary Cell-Bruno Busic Dept<br>Democratic Front for the Liberation of Palestine (DFLP)<br>Dev Sol<br>Extraparliamentary Opposition (APO)<br>Fedayeen Khalq (People's Commandos)<br>Fedayeen of the Imperial Iranian Monarchy<br>First of October Antifascist Resistance Group (GRAPO)<br>Gruppe Haw Weg Den Scheiss<br>Iraqi extremists<br>Irish National Liberation Army (INLA)<br>Irish Republican Army (IRA)<br>League of the 18<br>Left-Wing Guerrillas<br>Liberation Commando Rudolf Hess<br>May 15 Organization for the Liberation of Palestine<br>Militant Cells<br>MLA<br>Movement of the Third Reich<br>Mujahedin-e Khalq (MEK)<br>Mustafa Aktas Fighting Unit<br>Neo-Nazi extremists<br>New Armenian Resistance<br>Northern Terror Front<br>Organization of the Sons of Occupied Territories<br>Palestinians<br>Plowshares<br>Popular Front for the Liberation of Palestine (PFLP)<br>Popular Front for the Liberation of Palestine, Gen Cmd (PFLP-GC)<br>Proletarian Action Group<br>Proletarian Initiative and Offensive for W. Europe<br>Red Army Faction (RAF)<br>Red Cell<br>Revolutionary Cells<br>Revolutionary Fighting Group 80<br>Revolutionary Peoples Army<br>Right-wing extremists<br>Rote Zora<br>RVA<br>Separatists<br>Socialist Patients' Collective (SPK)<br>Soldiers of the Algerian Opposition<br>Students for a Democratic Society (SDS) (German)<br>Sympathizers of "Iranian People's Zeda'i"<br>Syrians<br>Territorial Resistance Army<br>The Armed Secret Organization<br>Unknown<br>Youths</div>`)[0];
+                popup_4077e0da9a704961b3354a411b49a78c.setContent(html_6b1441e3d4e5d15eaaf8fd63034cfe83);
+            
+        
+
+        marker_a13a0aab191543836bad6d95d8027c8b.bindPopup(popup_4077e0da9a704961b3354a411b49a78c)
+        ;
+
+        
+    
+</script>
+</html>
