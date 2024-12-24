@@ -75,14 +75,7 @@ def attack_trends():
 
 # 6. אחוז שינוי במספר הפיגועים בין שנים לפי אזור
 def yearly_change_per_region(region=None, top=None):
-    """
-    מחזיר רשימת tuples בפורמט:
-    [
-      (region_name, avg_change_percent, lat, lon),
-      ...
-    ]
-    כאשר avg_change_percent הוא הממוצע של אחוזי השינוי בין כל זוג שנים עוקבות.
-    """
+
     session = get_session()
     # שולפים: region, year, count(event_id), avg(lat), avg(lon)
     q = (
@@ -104,8 +97,6 @@ def yearly_change_per_region(region=None, top=None):
     raw_rows = q.all()
     session.close()
 
-    # raw_rows -> List[ (region_txt, year, count_events, avg_lat, avg_lon), ... ]
-    # בניית מבנה לאגירת הנתונים לפי region:
     data_dict = {}
     for (r, y, cnt, lat, lon) in raw_rows:
         if r not in data_dict:
@@ -136,9 +127,7 @@ def yearly_change_per_region(region=None, top=None):
         avg_change = sum(changes)/len(changes) if changes else 0.0
         final_rows.append((r, avg_change, lat, lon))
 
-    # סינון Top אם צריך
     if top:
-        # נמיין לפי ערך השינוי בסדר יורד
         final_rows.sort(key=lambda x: abs(x[1]), reverse=True)
         final_rows = final_rows[:top]
 

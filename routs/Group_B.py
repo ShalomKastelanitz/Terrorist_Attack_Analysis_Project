@@ -1,9 +1,7 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import func, desc
 from collections import defaultdict
-
 from sqlalchemy.exc import InvalidRequestError
-
 from db.utils import get_session
 from db.schema.create_tables import FactEvents, DimDate, DimLocation, DimAttackType, DimTargetType, DimGroup
 import pandas as pd
@@ -36,11 +34,9 @@ def groups_with_same_targets_in_region(region=None, city=None):
         )
     )
 
-    # סינון לפי region אם סופק
     if region:
         q = q.filter(DimLocation.region_txt.ilike(f"%{region}%"))
 
-    # סינון לפי city אם סופק
     if city:
         q = q.filter(DimLocation.city.ilike(f"%{city}%"))
 
@@ -55,7 +51,6 @@ def groups_with_same_targets_in_region(region=None, city=None):
 def groups_in_same_attack(event_id):
     session = get_session()
     try:
-        # שאילתה לקבלת הקבוצות המשתתפות באירוע
         event = (
             session.query(
                 FactEvents.primary_group_id,
@@ -79,7 +74,6 @@ def groups_in_same_attack(event_id):
             .all()
         )
 
-        # סגירת הסשן
         session.close()
 
         # החזרת התוצאה בפורמט JSON
@@ -154,7 +148,6 @@ def groups_with_similar_target_preferences():
 def regions_with_high_group_diversity(region=None, country=None, city=None, limit=20):
     session = get_session()
 
-    # שאילתה לספירת כמות הקבוצות הייחודיות בכל אזור
     q = (
         session.query(
             DimLocation.region_txt,
